@@ -1,0 +1,41 @@
+\doxysubsection{visibility\+\_\+control.\+h}
+\hypertarget{visibility__control_8h_source}{}\label{visibility__control_8h_source}\index{/home/amaury/2023-\/24-\/Final-\/Project-\/Group-\/2/src/ros2\_packages/sim\_ros2\_interface/include/sim\_ros2\_interface/visibility\_control.h@{/home/amaury/2023-\/24-\/Final-\/Project-\/Group-\/2/src/ros2\_packages/sim\_ros2\_interface/include/sim\_ros2\_interface/visibility\_control.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifndef}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_\_VISIBILITY\_CONTROL\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_\_VISIBILITY\_CONTROL\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ This\ logic\ was\ borrowed\ (then\ namespaced)\ from\ the\ examples\ on\ the\ gcc\ wiki:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ https://gcc.gnu.org/wiki/Visibility}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{if}\ \textcolor{preprocessor}{defined}\ \textcolor{preprocessor}{\_WIN32}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{defined}\ \textcolor{preprocessor}{\_\_CYGWIN\_\_}}
+\DoxyCodeLine{00008\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef}\ \textcolor{preprocessor}{\_\_GNUC\_\_}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_EXPORT}\ \textcolor{preprocessor}{\_\_attribute\_\_}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{(}\textcolor{preprocessor}{dllexport}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_IMPORT}\ \textcolor{preprocessor}{\_\_attribute\_\_}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{(}\textcolor{preprocessor}{dllimport}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00011\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_EXPORT}\ \textcolor{preprocessor}{\_\_declspec}\textcolor{preprocessor}{(}\textcolor{preprocessor}{dllexport}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_IMPORT}\ \textcolor{preprocessor}{\_\_declspec}\textcolor{preprocessor}{(}\textcolor{preprocessor}{dllimport}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00014\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00015\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_BUILDING\_LIBRARY}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_PUBLIC}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_EXPORT}}
+\DoxyCodeLine{00017\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_PUBLIC}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_IMPORT}}
+\DoxyCodeLine{00019\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00020\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_PUBLIC\_TYPE}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_PUBLIC}}
+\DoxyCodeLine{00021\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_LOCAL}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{00023\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_EXPORT}\ \textcolor{keyword}{\_\_attribute\_\_}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{(}\textcolor{preprocessor}{visibility}\textcolor{preprocessor}{(}\textcolor{stringliteral}{"{}default"{}}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00024\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_IMPORT}}
+\DoxyCodeLine{00025\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{if}\ \_\_GNUC\_\_\ \textcolor{preprocessor}{>=}\ 4}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_PUBLIC}\ \textcolor{keyword}{\_\_attribute\_\_}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{(}\textcolor{preprocessor}{visibility}\textcolor{preprocessor}{(}\textcolor{stringliteral}{"{}default"{}}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_LOCAL}\ \ \textcolor{keyword}{\_\_attribute\_\_}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{(}\textcolor{preprocessor}{visibility}\textcolor{preprocessor}{(}\textcolor{stringliteral}{"{}hidden"{}}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00028\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_PUBLIC}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_LOCAL}}
+\DoxyCodeLine{00031\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00032\ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_INTERFACE\_PUBLIC\_TYPE}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}\ \ \textcolor{comment}{//\ SIM\_ROS2\_INTERFACE\_\_VISIBILITY\_CONTROL\_H\_}}
+
+\end{DoxyCode}

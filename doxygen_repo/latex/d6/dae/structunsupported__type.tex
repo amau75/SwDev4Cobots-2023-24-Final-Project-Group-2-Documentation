@@ -1,0 +1,69 @@
+\doxysubsection{unsupported\+\_\+type Struct Reference}
+\hypertarget{structunsupported__type}{}\label{structunsupported__type}\index{unsupported\_type@{unsupported\_type}}
+Inheritance diagram for unsupported\+\_\+type\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d6/dae/structunsupported__type}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structunsupported__type_adfddafaa875f8aeae72ba68941c07ddb}{unsupported\+\_\+type}} (const std\+::string \&w, const std\+::string \&t)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structunsupported__type_af53d54fa1d75ca6adf5a3e4b66d8f183}{what}} () const  throw ()
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structunsupported__type_a7c60e77b006e99dd219d076c30c63ac5}\label{structunsupported__type_a7c60e77b006e99dd219d076c30c63ac5} 
+std\+::string {\bfseries message}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structunsupported__type_adfddafaa875f8aeae72ba68941c07ddb}\label{structunsupported__type_adfddafaa875f8aeae72ba68941c07ddb} 
+\index{unsupported\_type@{unsupported\_type}!unsupported\_type@{unsupported\_type}}
+\index{unsupported\_type@{unsupported\_type}!unsupported\_type@{unsupported\_type}}
+\doxyparagraph{\texorpdfstring{unsupported\_type()}{unsupported\_type()}}
+{\footnotesize\ttfamily unsupported\+\_\+type\+::unsupported\+\_\+type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{w,  }\item[{const std\+::string \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}Unsupported\ "{}}\ <<\ w\ <<\ \textcolor{stringliteral}{"{}\ type\ '"{}}\ <<\ t\ <<\ \textcolor{stringliteral}{"{}'.\ You\ may\ want\ to\ add\ it\ to\ meta/interfaces.txt\ and\ recompile\ the\ ROS2Interface\ plugin."{}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ message\ =\ ss.str();}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{structunsupported__type_af6aa3ab15dcdb5ece667093b8bf160fd}\label{structunsupported__type_af6aa3ab15dcdb5ece667093b8bf160fd} 
+\index{unsupported\_type@{unsupported\_type}!````~unsupported\_type@{\texorpdfstring{$\sim$}{\string~}unsupported\_type}}
+\index{````~unsupported\_type@{\texorpdfstring{$\sim$}{\string~}unsupported\_type}!unsupported\_type@{unsupported\_type}}
+\doxyparagraph{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}unsupported\_type()}{\string~unsupported\_type()}}
+{\footnotesize\ttfamily unsupported\+\_\+type\+::\texorpdfstring{$\sim$}{\string~}unsupported\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throw ( ) \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Member Function Documentation}
+\Hypertarget{structunsupported__type_af53d54fa1d75ca6adf5a3e4b66d8f183}\label{structunsupported__type_af53d54fa1d75ca6adf5a3e4b66d8f183} 
+\index{unsupported\_type@{unsupported\_type}!what@{what}}
+\index{what@{what}!unsupported\_type@{unsupported\_type}}
+\doxyparagraph{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} unsupported\+\_\+type\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw ( ) \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \{\textcolor{keywordflow}{return}\ message.c\_str();\}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/amaury/2023-\/24-\/\+Final-\/\+Project-\/\+Group-\/2/src/ros2\+\_\+packages/sim\+\_\+ros2\+\_\+interface/src/sim\+\_\+ros2\+\_\+interface.\+cpp\end{DoxyCompactItemize}

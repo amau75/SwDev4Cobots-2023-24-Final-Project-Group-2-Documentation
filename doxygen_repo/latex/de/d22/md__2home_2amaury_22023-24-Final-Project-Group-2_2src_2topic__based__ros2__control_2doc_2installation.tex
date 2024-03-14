@@ -1,0 +1,48 @@
+\doxysection{Installation}
+\hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2installation}{}\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2installation}\index{Installation@{Installation}}
+\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2installation_autotoc_md6}%
+\Hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2installation_autotoc_md6}%
+ \hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2installation_autotoc_md7}{}\doxysubsection{\texorpdfstring{Binaries}{Binaries}}\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2installation_autotoc_md7}
+{\ttfamily topic\+\_\+based\+\_\+ros2\+\_\+control} is currently only released for ROS2 Humble and Rolling. For other ROS2 releases, you may need to build it from source. \begin{DoxyVerb}    sudo apt-get install ros-$ROS_DISTRO-topic-based-ros2-control
+\end{DoxyVerb}
+ \hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2installation_autotoc_md8}{}\doxysubsection{\texorpdfstring{Build from Source}{Build from Source}}\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2installation_autotoc_md8}
+These instructions assume you are running on Ubuntu 22.\+04\+:
+
+
+\begin{DoxyEnumerate}
+\item \href{https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html}{\texttt{ Install ROS2 humble}}. You can stop following along with the tutorial after you complete the section titled\+: \href{https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html\#environment-setup}{\texttt{ Environment setup}}. Make sure you setup your environment with\+: \begin{DoxyVerb} source /opt/ros/humble/setup.bash
+\end{DoxyVerb}
+ \begin{quote}
+{\itshape NOTE\+:} You may want to add that line to your {\ttfamily \texorpdfstring{$\sim$}{\string~}/.bashrc} \end{quote}
+
+\item \href{https://docs.ros.org/en/humble/Installation/Ubuntu-Development-Setup.html\#install-development-tools-and-ros-tools}{\texttt{ Install ROS2 Build Tools}}
+\end{DoxyEnumerate}
+
+\begin{quote}
+{\itshape NOTE\+:} If installing on a fresh OS, run {\ttfamily sudo rosdep init} and {\ttfamily rosdep update} before the install script \end{quote}
+
+\begin{DoxyEnumerate}
+\item Create a colcon workspace ({\itshape Note\+:} Feel free to change {\ttfamily \texorpdfstring{$\sim$}{\string~}/ws\+\_\+ros2} to whatever absolute path you want)\+: \begin{DoxyVerb} export COLCON_WS=~/ws_ros2/
+ mkdir -p $COLCON_WS/src
+\end{DoxyVerb}
+
+\item Get the repo and install any dependencies\+: \begin{DoxyVerb} cd $COLCON_WS/src
+ git clone git@github.com:PickNikRobotics/topic_based_ros2_control.git
+
+ rosdep install --ignore-src --from-paths . -y
+
+ # Pick a ROS_DOMAIN_ID that doesn't clash with others
+ # This one need to be the same value as TopicBased's domain id (0 by default)
+ echo 'export ROS_DOMAIN_ID='<YOUR-NUMBER> >> ~/.bashrc
+\end{DoxyVerb}
+
+\item Configure and build the workspace\+: \begin{DoxyVerb} cd $COLCON_WS
+ colcon build --symlink-install --event-handlers log-
+\end{DoxyVerb}
+
+\item Source the workspace. \begin{DoxyVerb} source $COLCON_WS/install/setup.bash
+\end{DoxyVerb}
+ \begin{quote}
+{\itshape Note}\+: Whenever you open a new terminal be sure to run {\ttfamily source /opt/ros/humble/setup.bash}, {\ttfamily export COLCON\+\_\+\+WS=\texorpdfstring{$\sim$}{\string~}/ws\+\_\+ros2}, and {\ttfamily source \$COLCON\+\_\+\+WS/install/setup.\+bash}. You may want to add those commands to your {\ttfamily \texorpdfstring{$\sim$}{\string~}/.bashrc} \end{quote}
+
+\end{DoxyEnumerate}

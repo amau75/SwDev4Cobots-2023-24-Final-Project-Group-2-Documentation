@@ -1,0 +1,1551 @@
+\doxysubsection{Plugin Class Reference}
+\hypertarget{classPlugin}{}\label{classPlugin}\index{Plugin@{Plugin}}
+Inheritance diagram for Plugin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{db/df9/classPlugin}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPlugin_a7daa146318b98435d91e5e91b08f1ce1}{on\+Init}} ()
+\item 
+void \mbox{\hyperlink{classPlugin_aca5a02aac1d4f63bae498bb30c522ab4}{on\+Cleanup}} ()
+\item 
+void \mbox{\hyperlink{classPlugin_abaff06863af1af44396a6f0fbf2fc490}{on\+Instance\+Pass}} (const sim\+::\+Instance\+Pass\+Flags \&flags)
+\item 
+void \mbox{\hyperlink{classPlugin_a0383ba81c19dcef2fa26adafe4142c7c}{on\+Main\+Script\+About\+To\+Be\+Called}} (int \&out)
+\item 
+void \mbox{\hyperlink{classPlugin_a7372d34618c24272886d43d19cae8beb}{on\+Simulation\+About\+To\+Start}} ()
+\item 
+void \mbox{\hyperlink{classPlugin_ae01f2affc7c735ff2fae4ad7b941f108}{on\+Script\+State\+Destroyed}} (int script\+ID)
+\item 
+bool \mbox{\hyperlink{classPlugin_a8549edf55df1981758dc7b87e72f3f5d}{should\+Proxy\+Be\+Destroyed\+After\+Simulation\+Stop}} (int script\+ID)
+\item 
+void \mbox{\hyperlink{classPlugin_af4e96b4e0268c8810ac94b6d0fc7c6b2}{create\+Subscription}} (create\+Subscription\+\_\+in \texorpdfstring{$\ast$}{*}in, create\+Subscription\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a75cea79d76e61b70aa9fb89b096648a1}{shutdown\+Subscription}} (shutdown\+Subscription\+\_\+in \texorpdfstring{$\ast$}{*}in, shutdown\+Subscription\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_afe15d50f0fecad6c390118a4c30e64f5}{subscription\+Treat\+UInt8\+Array\+As\+String}} (subscription\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}in, subscription\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a4b99aad87e6818902b60f357d15ba6ce}{create\+Publisher}} (create\+Publisher\+\_\+in \texorpdfstring{$\ast$}{*}in, create\+Publisher\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a6d7d14b05f58a6a349a991e3703a4d3e}{shutdown\+Publisher}} (shutdown\+Publisher\+\_\+in \texorpdfstring{$\ast$}{*}in, shutdown\+Publisher\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a56ad0f601544fdfbaf2f7f58c5b3c1d4}{publisher\+Treat\+UInt8\+Array\+As\+String}} (publisher\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}in, publisher\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a3708fdf0c65d51cc00459b72bc080964}{publish}} (publish\+\_\+in \texorpdfstring{$\ast$}{*}in, publish\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_aac15d8fd91657729a9e5b142aa0732b7}{create\+Client}} (create\+Client\+\_\+in \texorpdfstring{$\ast$}{*}in, create\+Client\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_acbb65ade4d118aca769cdf70aeb336e9}{shutdown\+Client}} (shutdown\+Client\+\_\+in \texorpdfstring{$\ast$}{*}in, shutdown\+Client\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a1f373714870e07125a2204ada1091772}{client\+Treat\+UInt8\+Array\+As\+String}} (client\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}in, client\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_ad214c5969603f11e585f46241dec2acc}{wait\+For\+Service}} (wait\+For\+Service\+\_\+in \texorpdfstring{$\ast$}{*}in, wait\+For\+Service\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a68c3b076631d043a9baaaa9152e02738}{call}} (call\+\_\+in \texorpdfstring{$\ast$}{*}in, call\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a92437e245c610bb6e997d343d783e13e}{create\+Service}} (create\+Service\+\_\+in \texorpdfstring{$\ast$}{*}in, create\+Service\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_ad187541f2b611f5acef7d534bc64794b}{shutdown\+Service}} (shutdown\+Service\+\_\+in \texorpdfstring{$\ast$}{*}in, shutdown\+Service\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a7036a09fb627d0e07aef7dfdbadae88a}{service\+Treat\+UInt8\+Array\+As\+String}} (service\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}in, service\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_aa4707934561f9aceac421ecb3a1bc5aa}{create\+Action\+Client}} (create\+Action\+Client\+\_\+in \texorpdfstring{$\ast$}{*}in, create\+Action\+Client\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a206e3aad68c694085dc3783c13de7c2e}{shutdown\+Action\+Client}} (shutdown\+Action\+Client\+\_\+in \texorpdfstring{$\ast$}{*}in, shutdown\+Action\+Client\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_ac4b4ccf1122f8feff69bcc54cbdc5f03}{action\+Client\+Treat\+UInt8\+Array\+As\+String}} (action\+Client\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}in, action\+Client\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_adfa63c86c3e5ae9612054dd71bcc70e3}{send\+Goal}} (send\+Goal\+\_\+in \texorpdfstring{$\ast$}{*}in, send\+Goal\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a0df611039071ea698911d832ccf45942}{cancel\+Last\+Goal}} (cancel\+Last\+Goal\+\_\+in \texorpdfstring{$\ast$}{*}in, cancel\+Last\+Goal\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a0327b0863875dd6bc39dfcf95c8f73be}{create\+Action\+Server}} (create\+Action\+Server\+\_\+in \texorpdfstring{$\ast$}{*}in, create\+Action\+Server\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a3fee26e5d0e1ec76884a3c84226ac32c}{shutdown\+Action\+Server}} (shutdown\+Action\+Server\+\_\+in \texorpdfstring{$\ast$}{*}in, shutdown\+Action\+Server\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a6c74e15284befc9c91b02849bebfc7fd}{action\+Server\+Treat\+UInt8\+Array\+As\+String}} (action\+Server\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}in, action\+Server\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+{\footnotesize template$<$typename Action $>$ }\\rclcpp\+\_\+action\+::\+Server\+Goal\+Handle$<$ Action $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlugin_a0f94991c208665aa23165a12f9268bdf}{get\+Goal\+Handle}} (\mbox{\hyperlink{structActionServerProxy}{Action\+Server\+Proxy}} \texorpdfstring{$\ast$}{*}action\+Server\+Proxy, const std\+::string \&goal\+UUIDstr)
+\item 
+{\footnotesize template$<$typename Action $>$ }\\rclcpp\+\_\+action\+::\+Server\+Goal\+Handle$<$ Action $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlugin_adfa9f33bc5b9b6833a14c56aef7aa6b6}{get\+Goal\+Handle}} (\mbox{\hyperlink{structActionServerProxy}{Action\+Server\+Proxy}} \texorpdfstring{$\ast$}{*}action\+Server\+Proxy, const rclcpp\+\_\+action\+::\+Goal\+UUID \&goal\+UUID)
+\item 
+void \mbox{\hyperlink{classPlugin_a4bf693b72a649497862f785b4b464ca5}{cleanup\+Terminal\+Goal\+Handles}} (\mbox{\hyperlink{structActionServerProxy}{Action\+Server\+Proxy}} \texorpdfstring{$\ast$}{*}action\+Server\+Proxy)
+\item 
+void \mbox{\hyperlink{classPlugin_adfaa259a39673c8946d0e1ee6b6d53b1}{action\+Server\+Publish\+Feedback}} (action\+Server\+Publish\+Feedback\+\_\+in \texorpdfstring{$\ast$}{*}in, action\+Server\+Publish\+Feedback\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a20ab69a60dbcd382fe8406b001e37923}{action\+Server\+Action\+Abort}} (action\+Server\+Action\+Abort\+\_\+in \texorpdfstring{$\ast$}{*}in, action\+Server\+Action\+Abort\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_aab8486e559c92cfee4979a3b90770ef4}{action\+Server\+Action\+Succeed}} (action\+Server\+Action\+Succeed\+\_\+in \texorpdfstring{$\ast$}{*}in, action\+Server\+Action\+Succeed\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a02a3cf5ce7519280f78a1ff00b0801fd}{action\+Server\+Action\+Canceled}} (action\+Server\+Action\+Canceled\+\_\+in \texorpdfstring{$\ast$}{*}in, action\+Server\+Action\+Canceled\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a0bf58c03d3b916ba5e8b33449a99b62c}{action\+Server\+Action\+Execute}} (action\+Server\+Action\+Execute\+\_\+in \texorpdfstring{$\ast$}{*}in, action\+Server\+Action\+Execute\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a82301ab344a46c7103bed44dc2865322}{action\+Server\+Action\+Is\+Canceling}} (action\+Server\+Action\+Is\+Canceling\+\_\+in \texorpdfstring{$\ast$}{*}in, action\+Server\+Action\+Is\+Canceling\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a17ed7d437af46ed9420825cef2488ccf}{action\+Server\+Action\+Is\+Active}} (action\+Server\+Action\+Is\+Active\+\_\+in \texorpdfstring{$\ast$}{*}in, action\+Server\+Action\+Is\+Active\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a66e58ce4fb874569d39e41d1b7f22f4d}{action\+Server\+Action\+Is\+Executing}} (action\+Server\+Action\+Is\+Executing\+\_\+in \texorpdfstring{$\ast$}{*}in, action\+Server\+Action\+Is\+Executing\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a33b70020b73310ef4360851f0c84ed1b}{send\+Transform}} (send\+Transform\+\_\+in \texorpdfstring{$\ast$}{*}in, send\+Transform\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a22bc8733228ffc635d5b06ba46070c0a}{send\+Transforms}} (send\+Transforms\+\_\+in \texorpdfstring{$\ast$}{*}in, send\+Transforms\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a8f035e9e03dff6d080d2a007e7045cf3}{image\+Transport\+Create\+Subscription}} (image\+Transport\+Create\+Subscription\+\_\+in \texorpdfstring{$\ast$}{*}in, image\+Transport\+Create\+Subscription\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a24012a2296735f5f3d00194a55dacaf7}{image\+Transport\+Shutdown\+Subscription}} (image\+Transport\+Shutdown\+Subscription\+\_\+in \texorpdfstring{$\ast$}{*}in, image\+Transport\+Shutdown\+Subscription\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a331a25117a5900bfe3f8e97bdc689fda}{image\+Transport\+Create\+Publisher}} (image\+Transport\+Create\+Publisher\+\_\+in \texorpdfstring{$\ast$}{*}in, image\+Transport\+Create\+Publisher\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a3bb7b19933bcfc6f9de86d76e470ecd4}{image\+Transport\+Shutdown\+Publisher}} (image\+Transport\+Shutdown\+Publisher\+\_\+in \texorpdfstring{$\ast$}{*}in, image\+Transport\+Shutdown\+Publisher\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_ab32ff33f651adeb97df36d2be67a4ab4}{image\+Transport\+Publish}} (image\+Transport\+Publish\+\_\+in \texorpdfstring{$\ast$}{*}in, image\+Transport\+Publish\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a6039557ddc8e5f6498a4949a95808ed7}{get\+Time}} (get\+Time\+\_\+in \texorpdfstring{$\ast$}{*}in, get\+Time\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a9f5af37568d7509fafa1506dd9c6243e}{get\+Param\+String}} (get\+Param\+String\+\_\+in \texorpdfstring{$\ast$}{*}in, get\+Param\+String\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_af44902bb50d45bfa7526ff7347d9ef4c}{get\+Param\+Int}} (get\+Param\+Int\+\_\+in \texorpdfstring{$\ast$}{*}in, get\+Param\+Int\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_ae3c7ba9cc4659bbc8279805d345c89b3}{get\+Param\+Double}} (get\+Param\+Double\+\_\+in \texorpdfstring{$\ast$}{*}in, get\+Param\+Double\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_aea21839826d15027a5e777dc8b9172d2}{get\+Param\+Bool}} (get\+Param\+Bool\+\_\+in \texorpdfstring{$\ast$}{*}in, get\+Param\+Bool\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a30b09b2356d87958d8688184e16bd292}{set\+Param\+String}} (set\+Param\+String\+\_\+in \texorpdfstring{$\ast$}{*}in, set\+Param\+String\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_aec57e6e193ea0d147d2ec2cc6544a424}{set\+Param\+Int}} (set\+Param\+Int\+\_\+in \texorpdfstring{$\ast$}{*}in, set\+Param\+Int\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_af46f9f5b50f4950f13cb042e1c6f3ede}{set\+Param\+Double}} (set\+Param\+Double\+\_\+in \texorpdfstring{$\ast$}{*}in, set\+Param\+Double\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a39c2e509b572d470bbea4a52d45d5c3e}{set\+Param\+Bool}} (set\+Param\+Bool\+\_\+in \texorpdfstring{$\ast$}{*}in, set\+Param\+Bool\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_ae2b4711797470888dea1cd37bdc5185f}{has\+Param}} (has\+Param\+\_\+in \texorpdfstring{$\ast$}{*}in, has\+Param\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a587a90146ffeb33ca36acb3d7e07c4b8}{delete\+Param}} (delete\+Param\+\_\+in \texorpdfstring{$\ast$}{*}in, delete\+Param\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a7e72d40fa9520234e3c51f9b5703cf8f}{create\+Interface}} (create\+Interface\+\_\+in \texorpdfstring{$\ast$}{*}in, create\+Interface\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a2da75934870b4a037f5dd8ee0aad59f8}{get\+Interface\+Constants}} (get\+Interface\+Constants\+\_\+in \texorpdfstring{$\ast$}{*}in, get\+Interface\+Constants\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+void \mbox{\hyperlink{classPlugin_a19b5ab333d212979f3f803b3719b3d86}{supported\+Interfaces}} (supported\+Interfaces\+\_\+in \texorpdfstring{$\ast$}{*}in, supported\+Interfaces\+\_\+out \texorpdfstring{$\ast$}{*}out)
+\item 
+bool \mbox{\hyperlink{classPlugin_a619c98b4671938ebb3654dc6dae19a7e}{initialize}} ()
+\item 
+void \mbox{\hyperlink{classPlugin_acd4622ea27d5c7a36350329cdf821c41}{shutdown}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classPlugin_ac44dfcaab031e15be9afb687cb611890}{ros\+\_\+imtr\+\_\+callback}} (const sensor\+\_\+msgs\+::msg\+::\+Image\+::\+Const\+Shared\+Ptr \&msg, \mbox{\hyperlink{structSubscriptionProxy}{Subscription\+Proxy}} \texorpdfstring{$\ast$}{*}subscription\+Proxy, \mbox{\hyperlink{classPlugin}{Plugin}} \texorpdfstring{$\ast$}{*}plugin)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Member Function Documentation}
+\Hypertarget{classPlugin_ac4b4ccf1122f8feff69bcc54cbdc5f03}\label{classPlugin_ac4b4ccf1122f8feff69bcc54cbdc5f03} 
+\index{Plugin@{Plugin}!actionClientTreatUInt8ArrayAsString@{actionClientTreatUInt8ArrayAsString}}
+\index{actionClientTreatUInt8ArrayAsString@{actionClientTreatUInt8ArrayAsString}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{actionClientTreatUInt8ArrayAsString()}{actionClientTreatUInt8ArrayAsString()}}
+{\footnotesize\ttfamily void Plugin\+::action\+Client\+Treat\+UInt8\+Array\+As\+String (\begin{DoxyParamCaption}\item[{action\+Client\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{action\+Client\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00428\ \ \ \ \ \{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionClientProxy}{ActionClientProxy}}\ *actionClientProxy\ =\ actionClientHandles.get(in-\/>actionClientHandle);}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ actionClientProxy-\/>rd\_opt.uint8array\_as\_string\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ actionClientProxy-\/>wr\_opt.uint8array\_as\_string\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00432\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a20ab69a60dbcd382fe8406b001e37923}\label{classPlugin_a20ab69a60dbcd382fe8406b001e37923} 
+\index{Plugin@{Plugin}!actionServerActionAbort@{actionServerActionAbort}}
+\index{actionServerActionAbort@{actionServerActionAbort}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{actionServerActionAbort()}{actionServerActionAbort()}}
+{\footnotesize\ttfamily void Plugin\+::action\+Server\+Action\+Abort (\begin{DoxyParamCaption}\item[{action\+Server\+Action\+Abort\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{action\+Server\+Action\+Abort\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00546\ \ \ \ \ \{}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ actionServerHandles.get(in-\/>actionServerHandle);}
+\DoxyCodeLine{00548\ }
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00550\ \textcolor{preprocessor}{\#include\ <actsrv\_action\_abort.cpp>}}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionServerProxy-\/>actionType);}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00555\ }
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ cleanupTerminalGoalHandles(actionServerProxy);}
+\DoxyCodeLine{00557\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a02a3cf5ce7519280f78a1ff00b0801fd}\label{classPlugin_a02a3cf5ce7519280f78a1ff00b0801fd} 
+\index{Plugin@{Plugin}!actionServerActionCanceled@{actionServerActionCanceled}}
+\index{actionServerActionCanceled@{actionServerActionCanceled}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{actionServerActionCanceled()}{actionServerActionCanceled()}}
+{\footnotesize\ttfamily void Plugin\+::action\+Server\+Action\+Canceled (\begin{DoxyParamCaption}\item[{action\+Server\+Action\+Canceled\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{action\+Server\+Action\+Canceled\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00574\ \ \ \ \ \{}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ actionServerHandles.get(in-\/>actionServerHandle);}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00578\ \textcolor{preprocessor}{\#include\ <actsrv\_action\_canceled.cpp>}}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionServerProxy-\/>actionType);}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00583\ }
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ cleanupTerminalGoalHandles(actionServerProxy);}
+\DoxyCodeLine{00585\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a0bf58c03d3b916ba5e8b33449a99b62c}\label{classPlugin_a0bf58c03d3b916ba5e8b33449a99b62c} 
+\index{Plugin@{Plugin}!actionServerActionExecute@{actionServerActionExecute}}
+\index{actionServerActionExecute@{actionServerActionExecute}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{actionServerActionExecute()}{actionServerActionExecute()}}
+{\footnotesize\ttfamily void Plugin\+::action\+Server\+Action\+Execute (\begin{DoxyParamCaption}\item[{action\+Server\+Action\+Execute\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{action\+Server\+Action\+Execute\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00588\ \ \ \ \ \{}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ actionServerHandles.get(in-\/>actionServerHandle);}
+\DoxyCodeLine{00590\ }
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00592\ \textcolor{preprocessor}{\#include\ <actsrv\_action\_execute.cpp>}}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionServerProxy-\/>actionType);}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00597\ }
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ cleanupTerminalGoalHandles(actionServerProxy);}
+\DoxyCodeLine{00599\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a17ed7d437af46ed9420825cef2488ccf}\label{classPlugin_a17ed7d437af46ed9420825cef2488ccf} 
+\index{Plugin@{Plugin}!actionServerActionIsActive@{actionServerActionIsActive}}
+\index{actionServerActionIsActive@{actionServerActionIsActive}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{actionServerActionIsActive()}{actionServerActionIsActive()}}
+{\footnotesize\ttfamily void Plugin\+::action\+Server\+Action\+Is\+Active (\begin{DoxyParamCaption}\item[{action\+Server\+Action\+Is\+Active\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{action\+Server\+Action\+Is\+Active\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00614\ \ \ \ \ \{}
+\DoxyCodeLine{00615\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ actionServerHandles.get(in-\/>actionServerHandle);}
+\DoxyCodeLine{00616\ }
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00618\ \textcolor{preprocessor}{\#include\ <actsrv\_action\_is\_active.cpp>}}
+\DoxyCodeLine{00619\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionServerProxy-\/>actionType);}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00623\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a82301ab344a46c7103bed44dc2865322}\label{classPlugin_a82301ab344a46c7103bed44dc2865322} 
+\index{Plugin@{Plugin}!actionServerActionIsCanceling@{actionServerActionIsCanceling}}
+\index{actionServerActionIsCanceling@{actionServerActionIsCanceling}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{actionServerActionIsCanceling()}{actionServerActionIsCanceling()}}
+{\footnotesize\ttfamily void Plugin\+::action\+Server\+Action\+Is\+Canceling (\begin{DoxyParamCaption}\item[{action\+Server\+Action\+Is\+Canceling\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{action\+Server\+Action\+Is\+Canceling\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00602\ \ \ \ \ \{}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ actionServerHandles.get(in-\/>actionServerHandle);}
+\DoxyCodeLine{00604\ }
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00606\ \textcolor{preprocessor}{\#include\ <actsrv\_action\_is\_canceling.cpp>}}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionServerProxy-\/>actionType);}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00611\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a66e58ce4fb874569d39e41d1b7f22f4d}\label{classPlugin_a66e58ce4fb874569d39e41d1b7f22f4d} 
+\index{Plugin@{Plugin}!actionServerActionIsExecuting@{actionServerActionIsExecuting}}
+\index{actionServerActionIsExecuting@{actionServerActionIsExecuting}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{actionServerActionIsExecuting()}{actionServerActionIsExecuting()}}
+{\footnotesize\ttfamily void Plugin\+::action\+Server\+Action\+Is\+Executing (\begin{DoxyParamCaption}\item[{action\+Server\+Action\+Is\+Executing\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{action\+Server\+Action\+Is\+Executing\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00626\ \ \ \ \ \{}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ actionServerHandles.get(in-\/>actionServerHandle);}
+\DoxyCodeLine{00628\ }
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00630\ \textcolor{preprocessor}{\#include\ <actsrv\_action\_is\_executing.cpp>}}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionServerProxy-\/>actionType);}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00635\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_aab8486e559c92cfee4979a3b90770ef4}\label{classPlugin_aab8486e559c92cfee4979a3b90770ef4} 
+\index{Plugin@{Plugin}!actionServerActionSucceed@{actionServerActionSucceed}}
+\index{actionServerActionSucceed@{actionServerActionSucceed}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{actionServerActionSucceed()}{actionServerActionSucceed()}}
+{\footnotesize\ttfamily void Plugin\+::action\+Server\+Action\+Succeed (\begin{DoxyParamCaption}\item[{action\+Server\+Action\+Succeed\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{action\+Server\+Action\+Succeed\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00560\ \ \ \ \ \{}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ actionServerHandles.get(in-\/>actionServerHandle);}
+\DoxyCodeLine{00562\ }
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00564\ \textcolor{preprocessor}{\#include\ <actsrv\_action\_succeed.cpp>}}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionServerProxy-\/>actionType);}
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00569\ }
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ cleanupTerminalGoalHandles(actionServerProxy);}
+\DoxyCodeLine{00571\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_adfaa259a39673c8946d0e1ee6b6d53b1}\label{classPlugin_adfaa259a39673c8946d0e1ee6b6d53b1} 
+\index{Plugin@{Plugin}!actionServerPublishFeedback@{actionServerPublishFeedback}}
+\index{actionServerPublishFeedback@{actionServerPublishFeedback}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{actionServerPublishFeedback()}{actionServerPublishFeedback()}}
+{\footnotesize\ttfamily void Plugin\+::action\+Server\+Publish\+Feedback (\begin{DoxyParamCaption}\item[{action\+Server\+Publish\+Feedback\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{action\+Server\+Publish\+Feedback\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00534\ \ \ \ \ \{}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ actionServerHandles.get(in-\/>actionServerHandle);}
+\DoxyCodeLine{00536\ }
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00538\ \textcolor{preprocessor}{\#include\ <actsrv\_action\_publish\_feedback.cpp>}}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionServerProxy-\/>actionType);}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00543\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a6c74e15284befc9c91b02849bebfc7fd}\label{classPlugin_a6c74e15284befc9c91b02849bebfc7fd} 
+\index{Plugin@{Plugin}!actionServerTreatUInt8ArrayAsString@{actionServerTreatUInt8ArrayAsString}}
+\index{actionServerTreatUInt8ArrayAsString@{actionServerTreatUInt8ArrayAsString}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{actionServerTreatUInt8ArrayAsString()}{actionServerTreatUInt8ArrayAsString()}}
+{\footnotesize\ttfamily void Plugin\+::action\+Server\+Treat\+UInt8\+Array\+As\+String (\begin{DoxyParamCaption}\item[{action\+Server\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{action\+Server\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00497\ \ \ \ \ \{}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ actionServerHandles.get(in-\/>actionServerHandle);}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ actionServerProxy-\/>rd\_opt.uint8array\_as\_string\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ actionServerProxy-\/>wr\_opt.uint8array\_as\_string\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00501\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a68c3b076631d043a9baaaa9152e02738}\label{classPlugin_a68c3b076631d043a9baaaa9152e02738} 
+\index{Plugin@{Plugin}!call@{call}}
+\index{call@{call}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily void Plugin\+::call (\begin{DoxyParamCaption}\item[{call\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{call\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00339\ \ \ \ \ \{}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structClientProxy}{ClientProxy}}\ *clientProxy\ =\ clientHandles.get(in-\/>clientHandle);}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ sim::moveStackItemToTop(in-\/>\_.stackID,\ 0);}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00345\ \textcolor{preprocessor}{\#include\ <cli\_call.cpp>}}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}service"{}},\ clientProxy-\/>serviceType);}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00350\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a0df611039071ea698911d832ccf45942}\label{classPlugin_a0df611039071ea698911d832ccf45942} 
+\index{Plugin@{Plugin}!cancelLastGoal@{cancelLastGoal}}
+\index{cancelLastGoal@{cancelLastGoal}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{cancelLastGoal()}{cancelLastGoal()}}
+{\footnotesize\ttfamily void Plugin\+::cancel\+Last\+Goal (\begin{DoxyParamCaption}\item[{cancel\+Last\+Goal\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{cancel\+Last\+Goal\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00449\ \ \ \ \ \{}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionClientProxy}{ActionClientProxy}}\ *actionClientProxy\ =\ actionClientHandles.get(in-\/>actionClientHandle);}
+\DoxyCodeLine{00451\ }
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00453\ \textcolor{preprocessor}{\#include\ <actcli\_cancelLastGoal.cpp>}}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionClientProxy-\/>actionType);}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00458\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a4bf693b72a649497862f785b4b464ca5}\label{classPlugin_a4bf693b72a649497862f785b4b464ca5} 
+\index{Plugin@{Plugin}!cleanupTerminalGoalHandles@{cleanupTerminalGoalHandles}}
+\index{cleanupTerminalGoalHandles@{cleanupTerminalGoalHandles}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{cleanupTerminalGoalHandles()}{cleanupTerminalGoalHandles()}}
+{\footnotesize\ttfamily void Plugin\+::cleanup\+Terminal\+Goal\+Handles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structActionServerProxy}{Action\+Server\+Proxy}} \texorpdfstring{$\ast$}{*}}]{action\+Server\+Proxy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00521\ \ \ \ \ \{}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ FIXME:\ crash\ when\ actionServerActionSucceed\ is\ called\ */}\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ it\ =\ actionServerProxy-\/>goalHandles.begin();\ it\ !=\ actionServerProxy-\/>goalHandles.end();\ )}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(it-\/>second-\/>is\_active())}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++it;}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ actionServerProxy-\/>goalHandles.erase(it);}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00531\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a1f373714870e07125a2204ada1091772}\label{classPlugin_a1f373714870e07125a2204ada1091772} 
+\index{Plugin@{Plugin}!clientTreatUInt8ArrayAsString@{clientTreatUInt8ArrayAsString}}
+\index{clientTreatUInt8ArrayAsString@{clientTreatUInt8ArrayAsString}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{clientTreatUInt8ArrayAsString()}{clientTreatUInt8ArrayAsString()}}
+{\footnotesize\ttfamily void Plugin\+::client\+Treat\+UInt8\+Array\+As\+String (\begin{DoxyParamCaption}\item[{client\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{client\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00320\ \ \ \ \ \{}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structClientProxy}{ClientProxy}}\ *clientProxy\ =\ clientHandles.get(in-\/>clientHandle);}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ clientProxy-\/>rd\_opt.uint8array\_as\_string\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ clientProxy-\/>wr\_opt.uint8array\_as\_string\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00324\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_aa4707934561f9aceac421ecb3a1bc5aa}\label{classPlugin_aa4707934561f9aceac421ecb3a1bc5aa} 
+\index{Plugin@{Plugin}!createActionClient@{createActionClient}}
+\index{createActionClient@{createActionClient}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{createActionClient()}{createActionClient()}}
+{\footnotesize\ttfamily void Plugin\+::create\+Action\+Client (\begin{DoxyParamCaption}\item[{create\+Action\+Client\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{create\+Action\+Client\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00392\ \ \ \ \ \{}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionClientProxy}{ActionClientProxy}}\ *actionClientProxy\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structActionClientProxy}{ActionClientProxy}}();}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ actionClientProxy-\/>actionName\ =\ in-\/>actionName;}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ actionClientProxy-\/>actionType\ =\ in-\/>actionType;}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ actionClientProxy-\/>goalResponseCallback.scriptId\ =\ in-\/>\_.scriptID;}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ actionClientProxy-\/>goalResponseCallback.name\ =\ in-\/>goalResponseCallback;}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ actionClientProxy-\/>feedbackCallback.scriptId\ =\ in-\/>\_.scriptID;}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ actionClientProxy-\/>feedbackCallback.name\ =\ in-\/>feedbackCallback;}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ actionClientProxy-\/>resultCallback.scriptId\ =\ in-\/>\_.scriptID;}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ actionClientProxy-\/>resultCallback.name\ =\ in-\/>resultCallback;}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00404\ \textcolor{preprocessor}{\#include\ <actcli\_new.cpp>}}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionClientProxy-\/>actionType);}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ out-\/>actionClientHandle\ =\ actionClientProxy-\/>handle\ =\ actionClientHandles.add(actionClientProxy,\ in-\/>\_.scriptID);}
+\DoxyCodeLine{00411\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a0327b0863875dd6bc39dfcf95c8f73be}\label{classPlugin_a0327b0863875dd6bc39dfcf95c8f73be} 
+\index{Plugin@{Plugin}!createActionServer@{createActionServer}}
+\index{createActionServer@{createActionServer}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{createActionServer()}{createActionServer()}}
+{\footnotesize\ttfamily void Plugin\+::create\+Action\+Server (\begin{DoxyParamCaption}\item[{create\+Action\+Server\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{create\+Action\+Server\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00461\ \ \ \ \ \{}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}();}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ actionServerProxy-\/>actionName\ =\ in-\/>actionName;}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ actionServerProxy-\/>actionType\ =\ in-\/>actionType;}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ actionServerProxy-\/>handleGoalCallback.scriptId\ =\ in-\/>\_.scriptID;}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ actionServerProxy-\/>handleGoalCallback.name\ =\ in-\/>handleGoalCallback;}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ actionServerProxy-\/>handleCancelCallback.scriptId\ =\ in-\/>\_.scriptID;}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ actionServerProxy-\/>handleCancelCallback.name\ =\ in-\/>handleCancelCallback;}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ actionServerProxy-\/>handleAcceptedCallback.scriptId\ =\ in-\/>\_.scriptID;}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ actionServerProxy-\/>handleAcceptedCallback.name\ =\ in-\/>handleAcceptedCallback;}
+\DoxyCodeLine{00471\ }
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00473\ \textcolor{preprocessor}{\#include\ <actsrv\_new.cpp>}}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionServerProxy-\/>actionType);}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ out-\/>actionServerHandle\ =\ actionServerProxy-\/>handle\ =\ actionServerHandles.add(actionServerProxy,\ in-\/>\_.scriptID);}
+\DoxyCodeLine{00480\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_aac15d8fd91657729a9e5b142aa0732b7}\label{classPlugin_aac15d8fd91657729a9e5b142aa0732b7} 
+\index{Plugin@{Plugin}!createClient@{createClient}}
+\index{createClient@{createClient}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{createClient()}{createClient()}}
+{\footnotesize\ttfamily void Plugin\+::create\+Client (\begin{DoxyParamCaption}\item[{create\+Client\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{create\+Client\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00290\ \ \ \ \ \{}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structClientProxy}{ClientProxy}}\ *clientProxy\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structClientProxy}{ClientProxy}}();}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ clientProxy-\/>serviceName\ =\ in-\/>serviceName;}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ clientProxy-\/>serviceType\ =\ in-\/>serviceType;}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#include\ <cli\_new.cpp>}}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}service"{}},\ clientProxy-\/>serviceType);}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ out-\/>clientHandle\ =\ clientProxy-\/>handle\ =\ clientHandles.add(clientProxy,\ in-\/>\_.scriptID);}
+\DoxyCodeLine{00303\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a7e72d40fa9520234e3c51f9b5703cf8f}\label{classPlugin_a7e72d40fa9520234e3c51f9b5703cf8f} 
+\index{Plugin@{Plugin}!createInterface@{createInterface}}
+\index{createInterface@{createInterface}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{createInterface()}{createInterface()}}
+{\footnotesize\ttfamily void Plugin\+::create\+Interface (\begin{DoxyParamCaption}\item[{create\+Interface\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{create\+Interface\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00854\ \ \ \ \ \{}
+\DoxyCodeLine{00855\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00856\ \textcolor{preprocessor}{\#include\ <if\_new.cpp>}}
+\DoxyCodeLine{00857\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00858\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00859\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}interface"{}},\ in-\/>type);}
+\DoxyCodeLine{00860\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00861\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a4b99aad87e6818902b60f357d15ba6ce}\label{classPlugin_a4b99aad87e6818902b60f357d15ba6ce} 
+\index{Plugin@{Plugin}!createPublisher@{createPublisher}}
+\index{createPublisher@{createPublisher}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{createPublisher()}{createPublisher()}}
+{\footnotesize\ttfamily void Plugin\+::create\+Publisher (\begin{DoxyParamCaption}\item[{create\+Publisher\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{create\+Publisher\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00240\ \ \ \ \ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPublisherProxy}{PublisherProxy}}\ *publisherProxy\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structPublisherProxy}{PublisherProxy}}();}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ publisherProxy-\/>topicName\ =\ in-\/>topicName;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ publisherProxy-\/>topicType\ =\ in-\/>topicType;}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#include\ <pub\_new.cpp>}}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}message"{}},\ publisherProxy-\/>topicType);}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ out-\/>publisherHandle\ =\ publisherProxy-\/>handle\ =\ publisherHandles.add(publisherProxy,\ in-\/>\_.scriptID);}
+\DoxyCodeLine{00253\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a92437e245c610bb6e997d343d783e13e}\label{classPlugin_a92437e245c610bb6e997d343d783e13e} 
+\index{Plugin@{Plugin}!createService@{createService}}
+\index{createService@{createService}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{createService()}{createService()}}
+{\footnotesize\ttfamily void Plugin\+::create\+Service (\begin{DoxyParamCaption}\item[{create\+Service\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{create\+Service\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00353\ \ \ \ \ \{}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structServiceProxy}{ServiceProxy}}\ *serviceProxy\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structServiceProxy}{ServiceProxy}}();}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ serviceProxy-\/>serviceName\ =\ in-\/>serviceName;}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ serviceProxy-\/>serviceType\ =\ in-\/>serviceType;}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ serviceProxy-\/>serviceCallback.scriptId\ =\ in-\/>\_.scriptID;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ serviceProxy-\/>serviceCallback.name\ =\ in-\/>serviceCallback;}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00361\ \textcolor{preprocessor}{\#include\ <srv\_new.cpp>}}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}service"{}},\ serviceProxy-\/>serviceType);}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ out-\/>serviceHandle\ =\ serviceProxy-\/>handle\ =\ serviceHandles.add(serviceProxy,\ in-\/>\_.scriptID);}
+\DoxyCodeLine{00368\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_af4e96b4e0268c8810ac94b6d0fc7c6b2}\label{classPlugin_af4e96b4e0268c8810ac94b6d0fc7c6b2} 
+\index{Plugin@{Plugin}!createSubscription@{createSubscription}}
+\index{createSubscription@{createSubscription}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{createSubscription()}{createSubscription()}}
+{\footnotesize\ttfamily void Plugin\+::create\+Subscription (\begin{DoxyParamCaption}\item[{create\+Subscription\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{create\+Subscription\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00202\ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structSubscriptionProxy}{SubscriptionProxy}}\ *subscriptionProxy\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structSubscriptionProxy}{SubscriptionProxy}}();}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ subscriptionProxy-\/>topicName\ =\ in-\/>topicName;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ subscriptionProxy-\/>topicType\ =\ in-\/>topicType;}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ subscriptionProxy-\/>topicCallback.scriptId\ =\ in-\/>\_.scriptID;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ subscriptionProxy-\/>topicCallback.name\ =\ in-\/>topicCallback;}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#include\ <sub\_new.cpp>}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}message"{}},\ subscriptionProxy-\/>topicType);}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ out-\/>subscriptionHandle\ =\ subscriptionProxy-\/>handle\ =\ subscriptionHandles.add(subscriptionProxy,\ in-\/>\_.scriptID);}
+\DoxyCodeLine{00217\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a587a90146ffeb33ca36acb3d7e07c4b8}\label{classPlugin_a587a90146ffeb33ca36acb3d7e07c4b8} 
+\index{Plugin@{Plugin}!deleteParam@{deleteParam}}
+\index{deleteParam@{deleteParam}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{deleteParam()}{deleteParam()}}
+{\footnotesize\ttfamily void Plugin\+::delete\+Param (\begin{DoxyParamCaption}\item[{delete\+Param\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{delete\+Param\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00848\ \ \ \ \ \{}
+\DoxyCodeLine{00849\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(params\_client-\/>has\_parameter(in-\/>name))}
+\DoxyCodeLine{00850\ \ \ \ \ \ \ \ \ \ \ \ \ params\_client-\/>set\_parameters(\{rclcpp::Parameter(in-\/>name,\ rclcpp::ParameterValue())\});}
+\DoxyCodeLine{00851\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_adfa9f33bc5b9b6833a14c56aef7aa6b6}\label{classPlugin_adfa9f33bc5b9b6833a14c56aef7aa6b6} 
+\index{Plugin@{Plugin}!getGoalHandle@{getGoalHandle}}
+\index{getGoalHandle@{getGoalHandle}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{getGoalHandle()}{getGoalHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Action $>$ \\
+rclcpp\+\_\+action\+::\+Server\+Goal\+Handle$<$ Action $>$ \texorpdfstring{$\ast$}{*} Plugin\+::get\+Goal\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structActionServerProxy}{Action\+Server\+Proxy}} \texorpdfstring{$\ast$}{*}}]{action\+Server\+Proxy,  }\item[{const rclcpp\+\_\+action\+::\+Goal\+UUID \&}]{goal\+UUID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00511\ \ \ \ \ \{}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ actsrv\ =\ boost::any\_cast<\ std::shared\_ptr<\ rclcpp\_action::Server<\ Action\ >\ >\ >(actionServerProxy-\/>action\_server);}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ actionServerProxy-\/>goalHandles.find(goalUUID);}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(it\ ==\ actionServerProxy-\/>goalHandles.end())}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ sim::exception(\textcolor{stringliteral}{"{}goal\ handle\ '\%s'\ does\ not\ exist"{}},\ goalUUIDtoString(goalUUID));}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ goalHandleBase\ =\ it-\/>second.get();}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{dynamic\_cast<}\ rclcpp\_action::ServerGoalHandle<Action>*\ \textcolor{keyword}{>}(goalHandleBase);}
+\DoxyCodeLine{00518\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a0f94991c208665aa23165a12f9268bdf}\label{classPlugin_a0f94991c208665aa23165a12f9268bdf} 
+\index{Plugin@{Plugin}!getGoalHandle@{getGoalHandle}}
+\index{getGoalHandle@{getGoalHandle}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{getGoalHandle()}{getGoalHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Action $>$ \\
+rclcpp\+\_\+action\+::\+Server\+Goal\+Handle$<$ Action $>$ \texorpdfstring{$\ast$}{*} Plugin\+::get\+Goal\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structActionServerProxy}{Action\+Server\+Proxy}} \texorpdfstring{$\ast$}{*}}]{action\+Server\+Proxy,  }\item[{const std\+::string \&}]{goal\+UUIDstr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00505\ \ \ \ \ \{}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ getGoalHandle<Action>(actionServerProxy,\ goalUUIDfromString(goalUUIDstr));}
+\DoxyCodeLine{00507\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a2da75934870b4a037f5dd8ee0aad59f8}\label{classPlugin_a2da75934870b4a037f5dd8ee0aad59f8} 
+\index{Plugin@{Plugin}!getInterfaceConstants@{getInterfaceConstants}}
+\index{getInterfaceConstants@{getInterfaceConstants}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{getInterfaceConstants()}{getInterfaceConstants()}}
+{\footnotesize\ttfamily void Plugin\+::get\+Interface\+Constants (\begin{DoxyParamCaption}\item[{get\+Interface\+Constants\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{get\+Interface\+Constants\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00864\ \ \ \ \ \{}
+\DoxyCodeLine{00865\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00866\ \textcolor{preprocessor}{\#include\ <if\_const.cpp>}}
+\DoxyCodeLine{00867\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00868\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00869\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}interface"{}},\ in-\/>type);}
+\DoxyCodeLine{00870\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00871\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_aea21839826d15027a5e777dc8b9172d2}\label{classPlugin_aea21839826d15027a5e777dc8b9172d2} 
+\index{Plugin@{Plugin}!getParamBool@{getParamBool}}
+\index{getParamBool@{getParamBool}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{getParamBool()}{getParamBool()}}
+{\footnotesize\ttfamily void Plugin\+::get\+Param\+Bool (\begin{DoxyParamCaption}\item[{get\+Param\+Bool\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{get\+Param\+Bool\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00812\ \ \ \ \ \{}
+\DoxyCodeLine{00813\ \ \ \ \ \ \ \ \ out-\/>exists\ =\ params\_client-\/>has\_parameter(in-\/>name);}
+\DoxyCodeLine{00814\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(out-\/>exists)}
+\DoxyCodeLine{00815\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00816\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \&param\ =\ params\_client-\/>get\_parameters(\{in-\/>name\}).front();}
+\DoxyCodeLine{00817\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(param.get\_type()\ ==\ rclcpp::PARAMETER\_BOOL)}
+\DoxyCodeLine{00818\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ out-\/>value\ =\ param.get\_value<rclcpp::PARAMETER\_BOOL>();}
+\DoxyCodeLine{00819\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00820\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_ae3c7ba9cc4659bbc8279805d345c89b3}\label{classPlugin_ae3c7ba9cc4659bbc8279805d345c89b3} 
+\index{Plugin@{Plugin}!getParamDouble@{getParamDouble}}
+\index{getParamDouble@{getParamDouble}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{getParamDouble()}{getParamDouble()}}
+{\footnotesize\ttfamily void Plugin\+::get\+Param\+Double (\begin{DoxyParamCaption}\item[{get\+Param\+Double\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{get\+Param\+Double\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00801\ \ \ \ \ \{}
+\DoxyCodeLine{00802\ \ \ \ \ \ \ \ \ out-\/>exists\ =\ params\_client-\/>has\_parameter(in-\/>name);}
+\DoxyCodeLine{00803\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(out-\/>exists)}
+\DoxyCodeLine{00804\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00805\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \&param\ =\ params\_client-\/>get\_parameters(\{in-\/>name\}).front();}
+\DoxyCodeLine{00806\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(param.get\_type()\ ==\ rclcpp::PARAMETER\_DOUBLE)}
+\DoxyCodeLine{00807\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ out-\/>value\ =\ param.get\_value<rclcpp::PARAMETER\_DOUBLE>();}
+\DoxyCodeLine{00808\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00809\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_af44902bb50d45bfa7526ff7347d9ef4c}\label{classPlugin_af44902bb50d45bfa7526ff7347d9ef4c} 
+\index{Plugin@{Plugin}!getParamInt@{getParamInt}}
+\index{getParamInt@{getParamInt}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{getParamInt()}{getParamInt()}}
+{\footnotesize\ttfamily void Plugin\+::get\+Param\+Int (\begin{DoxyParamCaption}\item[{get\+Param\+Int\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{get\+Param\+Int\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00790\ \ \ \ \ \{}
+\DoxyCodeLine{00791\ \ \ \ \ \ \ \ \ out-\/>exists\ =\ params\_client-\/>has\_parameter(in-\/>name);}
+\DoxyCodeLine{00792\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(out-\/>exists)}
+\DoxyCodeLine{00793\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00794\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \&param\ =\ params\_client-\/>get\_parameters(\{in-\/>name\}).front();}
+\DoxyCodeLine{00795\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(param.get\_type()\ ==\ rclcpp::PARAMETER\_INTEGER)}
+\DoxyCodeLine{00796\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ out-\/>value\ =\ param.get\_value<rclcpp::PARAMETER\_INTEGER>();}
+\DoxyCodeLine{00797\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00798\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a9f5af37568d7509fafa1506dd9c6243e}\label{classPlugin_a9f5af37568d7509fafa1506dd9c6243e} 
+\index{Plugin@{Plugin}!getParamString@{getParamString}}
+\index{getParamString@{getParamString}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{getParamString()}{getParamString()}}
+{\footnotesize\ttfamily void Plugin\+::get\+Param\+String (\begin{DoxyParamCaption}\item[{get\+Param\+String\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{get\+Param\+String\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00779\ \ \ \ \ \{}
+\DoxyCodeLine{00780\ \ \ \ \ \ \ \ \ out-\/>exists\ =\ params\_client-\/>has\_parameter(in-\/>name);}
+\DoxyCodeLine{00781\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(out-\/>exists)}
+\DoxyCodeLine{00782\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00783\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \&param\ =\ params\_client-\/>get\_parameters(\{in-\/>name\}).front();}
+\DoxyCodeLine{00784\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(param.get\_type()\ ==\ rclcpp::PARAMETER\_STRING)}
+\DoxyCodeLine{00785\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ out-\/>value\ =\ param.get\_value<rclcpp::PARAMETER\_STRING>();}
+\DoxyCodeLine{00786\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00787\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a6039557ddc8e5f6498a4949a95808ed7}\label{classPlugin_a6039557ddc8e5f6498a4949a95808ed7} 
+\index{Plugin@{Plugin}!getTime@{getTime}}
+\index{getTime@{getTime}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily void Plugin\+::get\+Time (\begin{DoxyParamCaption}\item[{get\+Time\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{get\+Time\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00764\ \ \ \ \ \{}
+\DoxyCodeLine{00765\ \ \ \ \ \ \ \ \ rcl\_clock\_type\_t\ t\ =\ RCL\_ROS\_TIME;}
+\DoxyCodeLine{00766\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(in-\/>clock\_type)}
+\DoxyCodeLine{00767\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00768\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ simros2\_clock\_ros:\ \ \ \ t\ =\ RCL\_ROS\_TIME;\ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00769\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ simros2\_clock\_system:\ t\ =\ RCL\_SYSTEM\_TIME;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00770\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ simros2\_clock\_steady:\ t\ =\ RCL\_STEADY\_TIME;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00771\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00772\ \ \ \ \ \ \ \ \ rclcpp::Clock\ ros\_clock(t);}
+\DoxyCodeLine{00773\ \ \ \ \ \ \ \ \ builtin\_interfaces::msg::Time\ ros\_now\ =\ ros\_clock.now();}
+\DoxyCodeLine{00774\ \ \ \ \ \ \ \ \ out-\/>time.sec\ =\ ros\_now.sec;}
+\DoxyCodeLine{00775\ \ \ \ \ \ \ \ \ out-\/>time.nanosec\ =\ ros\_now.nanosec;}
+\DoxyCodeLine{00776\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_ae2b4711797470888dea1cd37bdc5185f}\label{classPlugin_ae2b4711797470888dea1cd37bdc5185f} 
+\index{Plugin@{Plugin}!hasParam@{hasParam}}
+\index{hasParam@{hasParam}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{hasParam()}{hasParam()}}
+{\footnotesize\ttfamily void Plugin\+::has\+Param (\begin{DoxyParamCaption}\item[{has\+Param\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{has\+Param\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00843\ \ \ \ \ \{}
+\DoxyCodeLine{00844\ \ \ \ \ \ \ \ \ out-\/>exists\ =\ params\_client-\/>has\_parameter(in-\/>name);}
+\DoxyCodeLine{00845\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a331a25117a5900bfe3f8e97bdc689fda}\label{classPlugin_a331a25117a5900bfe3f8e97bdc689fda} 
+\index{Plugin@{Plugin}!imageTransportCreatePublisher@{imageTransportCreatePublisher}}
+\index{imageTransportCreatePublisher@{imageTransportCreatePublisher}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{imageTransportCreatePublisher()}{imageTransportCreatePublisher()}}
+{\footnotesize\ttfamily void Plugin\+::image\+Transport\+Create\+Publisher (\begin{DoxyParamCaption}\item[{image\+Transport\+Create\+Publisher\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{image\+Transport\+Create\+Publisher\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00699\ \ \ \ \ \{}
+\DoxyCodeLine{00700\ \textcolor{preprocessor}{\#if\ image\_transport\_FOUND}}
+\DoxyCodeLine{00701\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPublisherProxy}{PublisherProxy}}\ *publisherProxy\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structPublisherProxy}{PublisherProxy}}();}
+\DoxyCodeLine{00702\ \ \ \ \ \ \ \ \ publisherProxy-\/>topicName\ =\ in-\/>topicName;}
+\DoxyCodeLine{00703\ \ \ \ \ \ \ \ \ publisherProxy-\/>topicType\ =\ \textcolor{stringliteral}{"{}@image\_transport"{}};}
+\DoxyCodeLine{00704\ }
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ publisherProxy-\/>imageTransportPublisher\ =\ imtr-\/>advertise(in-\/>topicName,\ in-\/>queueSize);}
+\DoxyCodeLine{00706\ }
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!publisherProxy-\/>imageTransportPublisher)}
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00709\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ sim::exception(\textcolor{stringliteral}{"{}failed\ creation\ of\ ROS\ ImageTransport\ publisher"{}});}
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00711\ }
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ out-\/>publisherHandle\ =\ publisherProxy-\/>handle\ =\ publisherHandles.add(publisherProxy,\ in-\/>\_.scriptID);}
+\DoxyCodeLine{00713\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00714\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ sim::exception(\textcolor{stringliteral}{"{}image\_transport\ not\ available.\ please\ rebuild\ this\ plugin."{}});}
+\DoxyCodeLine{00715\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00716\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a8f035e9e03dff6d080d2a007e7045cf3}\label{classPlugin_a8f035e9e03dff6d080d2a007e7045cf3} 
+\index{Plugin@{Plugin}!imageTransportCreateSubscription@{imageTransportCreateSubscription}}
+\index{imageTransportCreateSubscription@{imageTransportCreateSubscription}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{imageTransportCreateSubscription()}{imageTransportCreateSubscription()}}
+{\footnotesize\ttfamily void Plugin\+::image\+Transport\+Create\+Subscription (\begin{DoxyParamCaption}\item[{image\+Transport\+Create\+Subscription\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{image\+Transport\+Create\+Subscription\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00670\ \ \ \ \ \{}
+\DoxyCodeLine{00671\ \textcolor{preprocessor}{\#if\ image\_transport\_FOUND}}
+\DoxyCodeLine{00672\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structSubscriptionProxy}{SubscriptionProxy}}\ *subscriptionProxy\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structSubscriptionProxy}{SubscriptionProxy}}();}
+\DoxyCodeLine{00673\ \ \ \ \ \ \ \ \ subscriptionProxy-\/>topicName\ =\ in-\/>topicName;}
+\DoxyCodeLine{00674\ \ \ \ \ \ \ \ \ subscriptionProxy-\/>topicType\ =\ \textcolor{stringliteral}{"{}@image\_transport"{}};}
+\DoxyCodeLine{00675\ \ \ \ \ \ \ \ \ subscriptionProxy-\/>topicCallback.scriptId\ =\ in-\/>\_.scriptID;}
+\DoxyCodeLine{00676\ \ \ \ \ \ \ \ \ subscriptionProxy-\/>topicCallback.name\ =\ in-\/>topicCallback;}
+\DoxyCodeLine{00677\ }
+\DoxyCodeLine{00678\ \ \ \ \ \ \ \ \ subscriptionProxy-\/>imageTransportSubscription\ =\ imtr-\/>subscribe(in-\/>topicName,\ in-\/>queueSize,\ std::bind(ros\_imtr\_callback,\ \_1,\ subscriptionProxy,\ \textcolor{keyword}{this}));}
+\DoxyCodeLine{00679\ }
+\DoxyCodeLine{00680\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!subscriptionProxy-\/>imageTransportSubscription)}
+\DoxyCodeLine{00681\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00682\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ sim::exception(\textcolor{stringliteral}{"{}failed\ creation\ of\ ROS\ ImageTransport\ subscription"{}});}
+\DoxyCodeLine{00683\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00684\ }
+\DoxyCodeLine{00685\ \ \ \ \ \ \ \ \ out-\/>subscriptionHandle\ =\ subscriptionProxy-\/>handle\ =\ subscriptionHandles.add(subscriptionProxy,\ in-\/>\_.scriptID);}
+\DoxyCodeLine{00686\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ sim::exception(\textcolor{stringliteral}{"{}image\_transport\ not\ available.\ please\ rebuild\ this\ plugin."{}});}
+\DoxyCodeLine{00688\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00689\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_ab32ff33f651adeb97df36d2be67a4ab4}\label{classPlugin_ab32ff33f651adeb97df36d2be67a4ab4} 
+\index{Plugin@{Plugin}!imageTransportPublish@{imageTransportPublish}}
+\index{imageTransportPublish@{imageTransportPublish}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{imageTransportPublish()}{imageTransportPublish()}}
+{\footnotesize\ttfamily void Plugin\+::image\+Transport\+Publish (\begin{DoxyParamCaption}\item[{image\+Transport\+Publish\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{image\+Transport\+Publish\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00730\ \ \ \ \ \{}
+\DoxyCodeLine{00731\ \textcolor{preprocessor}{\#if\ image\_transport\_FOUND}}
+\DoxyCodeLine{00732\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPublisherProxy}{PublisherProxy}}\ *publisherProxy\ =\ publisherHandles.get(in-\/>publisherHandle);}
+\DoxyCodeLine{00733\ }
+\DoxyCodeLine{00734\ \ \ \ \ \ \ \ \ sensor\_msgs::msg::Image\ image\_msg;}
+\DoxyCodeLine{00735\ \ \ \ \ \ \ \ \ rclcpp::Clock\ ros\_clock(RCL\_ROS\_TIME);}
+\DoxyCodeLine{00736\ \ \ \ \ \ \ \ \ image\_msg.header.stamp\ =\ ros\_clock.now();}
+\DoxyCodeLine{00737\ \ \ \ \ \ \ \ \ image\_msg.header.frame\_id\ =\ in-\/>frame\_id;}
+\DoxyCodeLine{00738\ \ \ \ \ \ \ \ \ image\_msg.encoding\ =\ sensor\_msgs::image\_encodings::RGB8;}
+\DoxyCodeLine{00739\ \ \ \ \ \ \ \ \ image\_msg.width\ =\ in-\/>width;}
+\DoxyCodeLine{00740\ \ \ \ \ \ \ \ \ image\_msg.height\ =\ in-\/>height;}
+\DoxyCodeLine{00741\ \ \ \ \ \ \ \ \ image\_msg.step\ =\ image\_msg.width\ *\ 3;}
+\DoxyCodeLine{00742\ }
+\DoxyCodeLine{00743\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ data\_len\ =\ image\_msg.step\ *\ image\_msg.height;}
+\DoxyCodeLine{00744\ \ \ \ \ \ \ \ \ image\_msg.data.resize(data\_len);}
+\DoxyCodeLine{00745\ \ \ \ \ \ \ \ \ image\_msg.is\_bigendian\ =\ 0;}
+\DoxyCodeLine{00746\ }
+\DoxyCodeLine{00747\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ image\_msg.height;\ i++)}
+\DoxyCodeLine{00748\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00749\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ msg\_idx\ =\ (image\_msg.height\ -\/\ i\ -\/\ 1)\ *\ image\_msg.step;}
+\DoxyCodeLine{00750\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ buf\_idx\ =\ i\ *\ image\_msg.step;}
+\DoxyCodeLine{00751\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ image\_msg.step;\ j++)}
+\DoxyCodeLine{00752\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00753\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ image\_msg.data[msg\_idx\ +\ j]\ =\ in-\/>data[buf\_idx\ +\ j];}
+\DoxyCodeLine{00754\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00755\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00756\ }
+\DoxyCodeLine{00757\ \ \ \ \ \ \ \ \ publisherProxy-\/>imageTransportPublisher.publish(image\_msg);}
+\DoxyCodeLine{00758\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ sim::exception(\textcolor{stringliteral}{"{}image\_transport\ not\ available.\ please\ rebuild\ this\ plugin."{}});}
+\DoxyCodeLine{00760\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00761\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a3bb7b19933bcfc6f9de86d76e470ecd4}\label{classPlugin_a3bb7b19933bcfc6f9de86d76e470ecd4} 
+\index{Plugin@{Plugin}!imageTransportShutdownPublisher@{imageTransportShutdownPublisher}}
+\index{imageTransportShutdownPublisher@{imageTransportShutdownPublisher}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{imageTransportShutdownPublisher()}{imageTransportShutdownPublisher()}}
+{\footnotesize\ttfamily void Plugin\+::image\+Transport\+Shutdown\+Publisher (\begin{DoxyParamCaption}\item[{image\+Transport\+Shutdown\+Publisher\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{image\+Transport\+Shutdown\+Publisher\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00719\ \ \ \ \ \{}
+\DoxyCodeLine{00720\ \textcolor{preprocessor}{\#if\ image\_transport\_FOUND}}
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPublisherProxy}{PublisherProxy}}\ *publisherProxy\ =\ publisherHandles.get(in-\/>publisherHandle);}
+\DoxyCodeLine{00722\ \ \ \ \ \ \ \ \ \textcolor{comment}{//publisherProxy-\/>imageTransportPublisher.shutdown();}}
+\DoxyCodeLine{00723\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ publisherHandles.remove(publisherProxy);}
+\DoxyCodeLine{00724\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ sim::exception(\textcolor{stringliteral}{"{}image\_transport\ not\ available.\ please\ rebuild\ this\ plugin."{}});}
+\DoxyCodeLine{00726\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00727\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a24012a2296735f5f3d00194a55dacaf7}\label{classPlugin_a24012a2296735f5f3d00194a55dacaf7} 
+\index{Plugin@{Plugin}!imageTransportShutdownSubscription@{imageTransportShutdownSubscription}}
+\index{imageTransportShutdownSubscription@{imageTransportShutdownSubscription}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{imageTransportShutdownSubscription()}{imageTransportShutdownSubscription()}}
+{\footnotesize\ttfamily void Plugin\+::image\+Transport\+Shutdown\+Subscription (\begin{DoxyParamCaption}\item[{image\+Transport\+Shutdown\+Subscription\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{image\+Transport\+Shutdown\+Subscription\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00692\ \ \ \ \ \{}
+\DoxyCodeLine{00693\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structSubscriptionProxy}{SubscriptionProxy}}\ *subscriptionProxy\ =\ subscriptionHandles.get(in-\/>subscriptionHandle);}
+\DoxyCodeLine{00694\ \ \ \ \ \ \ \ \ \textcolor{comment}{//subscriptionProxy-\/>imageTransportSubscription.shutdown();}}
+\DoxyCodeLine{00695\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ subscriptionHandles.remove(subscriptionProxy);}
+\DoxyCodeLine{00696\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a619c98b4671938ebb3654dc6dae19a7e}\label{classPlugin_a619c98b4671938ebb3654dc6dae19a7e} 
+\index{Plugin@{Plugin}!initialize@{initialize}}
+\index{initialize@{initialize}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool Plugin\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00879\ \ \ \ \ \{}
+\DoxyCodeLine{00880\ \ \ \ \ \ \ \ \ rclcpp::init(0,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00881\ }
+\DoxyCodeLine{00882\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ node\_name\ =\ sim::getNamedStringParam(\textcolor{stringliteral}{"{}ROS2Interface.nodeName"{}});}
+\DoxyCodeLine{00883\ }
+\DoxyCodeLine{00884\ \ \ \ \ \ \ \ \ node\ =\ rclcpp::Node::make\_shared(node\_name.value\_or(\textcolor{stringliteral}{"{}sim\_ros2\_interface"{}}));}
+\DoxyCodeLine{00885\ }
+\DoxyCodeLine{00886\ \ \ \ \ \ \ \ \ tfbr\ =\ \textcolor{keyword}{new}\ tf2\_ros::TransformBroadcaster(node);}
+\DoxyCodeLine{00887\ \textcolor{preprocessor}{\#if\ image\_transport\_FOUND}}
+\DoxyCodeLine{00888\ \ \ \ \ \ \ \ \ imtr\ =\ \textcolor{keyword}{new}\ image\_transport::ImageTransport(node);}
+\DoxyCodeLine{00889\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00890\ }
+\DoxyCodeLine{00891\ \ \ \ \ \ \ \ \ params\_client\ =\ std::make\_shared<rclcpp::SyncParametersClient>(node);}
+\DoxyCodeLine{00892\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!params\_client-\/>wait\_for\_service(1s))}
+\DoxyCodeLine{00893\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00894\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!rclcpp::ok())}
+\DoxyCodeLine{00895\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00896\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sim::addLog(sim\_verbosity\_errors,\ \textcolor{stringliteral}{"{}Interrupted\ while\ waiting\ for\ parameters\ service"{}});}
+\DoxyCodeLine{00897\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00898\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00899\ \ \ \ \ \ \ \ \ \ \ \ \ sim::addLog(sim\_verbosity\_debug,\ \textcolor{stringliteral}{"{}Parameters\ service\ not\ available.\ Waiting\ for\ it..."{}});}
+\DoxyCodeLine{00900\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00901\ }
+\DoxyCodeLine{00902\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00903\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_aca5a02aac1d4f63bae498bb30c522ab4}\label{classPlugin_aca5a02aac1d4f63bae498bb30c522ab4} 
+\index{Plugin@{Plugin}!onCleanup@{onCleanup}}
+\index{onCleanup@{onCleanup}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{onCleanup()}{onCleanup()}}
+{\footnotesize\ttfamily void Plugin\+::on\+Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ shutdown();}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a7daa146318b98435d91e5e91b08f1ce1}\label{classPlugin_a7daa146318b98435d91e5e91b08f1ce1} 
+\index{Plugin@{Plugin}!onInit@{onInit}}
+\index{onInit@{onInit}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{onInit()}{onInit()}}
+{\footnotesize\ttfamily void Plugin\+::on\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!initialize())}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}failed\ to\ initialize\ ROS2\ node"{}});}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!registerScriptStuff())}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}failed\ to\ register\ script\ stuff"{}});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ setExtVersion(\textcolor{stringliteral}{"{}ROS2\ Interface\ Plugin"{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ setBuildDate(BUILD\_DATE);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_abaff06863af1af44396a6f0fbf2fc490}\label{classPlugin_abaff06863af1af44396a6f0fbf2fc490} 
+\index{Plugin@{Plugin}!onInstancePass@{onInstancePass}}
+\index{onInstancePass@{onInstancePass}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{onInstancePass()}{onInstancePass()}}
+{\footnotesize\ttfamily void Plugin\+::on\+Instance\+Pass (\begin{DoxyParamCaption}\item[{const sim\+::\+Instance\+Pass\+Flags \&}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ rclcpp::spin\_some(node);}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a0383ba81c19dcef2fa26adafe4142c7c}\label{classPlugin_a0383ba81c19dcef2fa26adafe4142c7c} 
+\index{Plugin@{Plugin}!onMainScriptAboutToBeCalled@{onMainScriptAboutToBeCalled}}
+\index{onMainScriptAboutToBeCalled@{onMainScriptAboutToBeCalled}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{onMainScriptAboutToBeCalled()}{onMainScriptAboutToBeCalled()}}
+{\footnotesize\ttfamily void Plugin\+::on\+Main\+Script\+About\+To\+Be\+Called (\begin{DoxyParamCaption}\item[{int \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ stopSimulationRequestCounter\ =\ sim::getInt32Param(sim\_intparam\_stop\_request\_counter);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ doNotRun\ =\ sim::getBoolParam(sim\_boolparam\_rosinterface\_donotrunmainscript);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(doNotRun\ >\ 0)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(previousStopSimulationRequestCounter\ ==\ -\/1)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ previousStopSimulationRequestCounter\ =\ stopSimulationRequestCounter;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(previousStopSimulationRequestCounter\ ==\ stopSimulationRequestCounter)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ out\ =\ 0;\ \textcolor{comment}{//\ this\ tells\ CoppeliaSim\ that\ we\ don't\ wanna\ execute\ the\ main\ script}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ previousStopSimulationRequestCounter\ =\ -\/1;}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_ae01f2affc7c735ff2fae4ad7b941f108}\label{classPlugin_ae01f2affc7c735ff2fae4ad7b941f108} 
+\index{Plugin@{Plugin}!onScriptStateDestroyed@{onScriptStateDestroyed}}
+\index{onScriptStateDestroyed@{onScriptStateDestroyed}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{onScriptStateDestroyed()}{onScriptStateDestroyed()}}
+{\footnotesize\ttfamily void Plugin\+::on\+Script\+State\+Destroyed (\begin{DoxyParamCaption}\item[{int}]{script\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ subscriptionProxy\ :\ subscriptionHandles.find(scriptID))}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!subscriptionProxy-\/>subscription.empty())}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shutdownSubscription\_in\ in1;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in1.subscriptionHandle\ =\ subscriptionProxy-\/>handle;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shutdownSubscription\_out\ out1;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shutdownSubscription(\&in1,\ \&out1);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#if\ image\_transport\_FOUND}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(subscriptionProxy-\/>imageTransportSubscription)}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ imageTransportShutdownSubscription\_in\ in1;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in1.subscriptionHandle\ =\ subscriptionProxy-\/>handle;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ imageTransportShutdownSubscription\_out\ out1;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ imageTransportShutdownSubscription(\&in1,\ \&out1);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ publisherProxy\ :\ publisherHandles.find(scriptID))}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!publisherProxy-\/>publisher.empty())}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shutdownPublisher\_in\ in1;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in1.publisherHandle\ =\ publisherProxy-\/>handle;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shutdownPublisher\_out\ out1;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shutdownPublisher(\&in1,\ \&out1);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#if\ image\_transport\_FOUND}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(publisherProxy-\/>imageTransportPublisher)}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ imageTransportShutdownPublisher\_in\ in1;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in1.publisherHandle\ =\ publisherProxy-\/>handle;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ imageTransportShutdownPublisher\_out\ out1;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ imageTransportShutdownPublisher(\&in1,\ \&out1);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ clientProxy\ :\ clientHandles.find(scriptID))}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownClient\_in\ in1;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ in1.clientHandle\ =\ clientProxy-\/>handle;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownClient\_out\ out1;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownClient(\&in1,\ \&out1);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ serviceProxy\ :\ serviceHandles.find(scriptID))}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownService\_in\ in1;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ in1.serviceHandle\ =\ serviceProxy-\/>handle;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownService\_out\ out1;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownService(\&in1,\ \&out1);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ actionClientProxy\ :\ actionClientHandles.find(scriptID))}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownActionClient\_in\ in1;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ in1.actionClientHandle\ =\ actionClientProxy-\/>handle;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownActionClient\_out\ out1;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownActionClient(\&in1,\ \&out1);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ actionServerProxy\ :\ actionServerHandles.find(scriptID))}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownActionServer\_in\ in1;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ in1.actionServerHandle\ =\ actionServerProxy-\/>handle;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownActionServer\_out\ out1;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ shutdownActionServer(\&in1,\ \&out1);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a7372d34618c24272886d43d19cae8beb}\label{classPlugin_a7372d34618c24272886d43d19cae8beb} 
+\index{Plugin@{Plugin}!onSimulationAboutToStart@{onSimulationAboutToStart}}
+\index{onSimulationAboutToStart@{onSimulationAboutToStart}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{onSimulationAboutToStart()}{onSimulationAboutToStart()}}
+{\footnotesize\ttfamily void Plugin\+::on\+Simulation\+About\+To\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ previousStopSimulationRequestCounter\ =\ -\/1;}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a3708fdf0c65d51cc00459b72bc080964}\label{classPlugin_a3708fdf0c65d51cc00459b72bc080964} 
+\index{Plugin@{Plugin}!publish@{publish}}
+\index{publish@{publish}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily void Plugin\+::publish (\begin{DoxyParamCaption}\item[{publish\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{publish\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00276\ \ \ \ \ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPublisherProxy}{PublisherProxy}}\ *publisherProxy\ =\ publisherHandles.get(in-\/>publisherHandle);}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ sim::moveStackItemToTop(in-\/>\_.stackID,\ 0);}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\#include\ <pub\_publish.cpp>}}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}message"{}},\ publisherProxy-\/>topicType);}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00287\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a56ad0f601544fdfbaf2f7f58c5b3c1d4}\label{classPlugin_a56ad0f601544fdfbaf2f7f58c5b3c1d4} 
+\index{Plugin@{Plugin}!publisherTreatUInt8ArrayAsString@{publisherTreatUInt8ArrayAsString}}
+\index{publisherTreatUInt8ArrayAsString@{publisherTreatUInt8ArrayAsString}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{publisherTreatUInt8ArrayAsString()}{publisherTreatUInt8ArrayAsString()}}
+{\footnotesize\ttfamily void Plugin\+::publisher\+Treat\+UInt8\+Array\+As\+String (\begin{DoxyParamCaption}\item[{publisher\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{publisher\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00270\ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPublisherProxy}{PublisherProxy}}\ *publisherProxy\ =\ publisherHandles.get(in-\/>publisherHandle);}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ publisherProxy-\/>rd\_opt.uint8array\_as\_string\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00273\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_ac44dfcaab031e15be9afb687cb611890}\label{classPlugin_ac44dfcaab031e15be9afb687cb611890} 
+\index{Plugin@{Plugin}!ros\_imtr\_callback@{ros\_imtr\_callback}}
+\index{ros\_imtr\_callback@{ros\_imtr\_callback}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{ros\_imtr\_callback()}{ros\_imtr\_callback()}}
+{\footnotesize\ttfamily static void Plugin\+::ros\+\_\+imtr\+\_\+callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::msg\+::\+Image\+::\+Const\+Shared\+Ptr \&}]{msg,  }\item[{\mbox{\hyperlink{structSubscriptionProxy}{Subscription\+Proxy}} \texorpdfstring{$\ast$}{*}}]{subscription\+Proxy,  }\item[{\mbox{\hyperlink{classPlugin}{Plugin}} \texorpdfstring{$\ast$}{*}}]{plugin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168\ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(msg-\/>is\_bigendian)}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}ros\_imtr\_callback:\ error:\ big\ endian\ image\ not\ supported"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ data\_len\ =\ msg-\/>step\ *\ msg-\/>height;}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ imageTransportCallback\_in\ in\_args;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ imageTransportCallback\_out\ out\_args;}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ in\_args.width\ =\ msg-\/>width;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ in\_args.height\ =\ msg-\/>height;}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ in\_args.data.resize(data\_len);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ msg-\/>height;\ i++)}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ msg\_idx\ =\ (msg-\/>height\ -\/\ i\ -\/\ 1)\ *\ msg-\/>step;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ buf\_idx\ =\ i\ *\ msg-\/>step;}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ msg-\/>step;\ j++)}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in\_args.data[buf\_idx\ +\ j]\ =\ msg-\/>data[msg\_idx\ +\ j];}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!imageTransportCallback(subscriptionProxy-\/>topicCallback.scriptId,\ subscriptionProxy-\/>topicCallback.name.c\_str(),\ \&in\_args,\ \&out\_args))}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}ros\_imtr\_callback:\ error:\ failed\ to\ call\ callback"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_adfa63c86c3e5ae9612054dd71bcc70e3}\label{classPlugin_adfa63c86c3e5ae9612054dd71bcc70e3} 
+\index{Plugin@{Plugin}!sendGoal@{sendGoal}}
+\index{sendGoal@{sendGoal}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{sendGoal()}{sendGoal()}}
+{\footnotesize\ttfamily void Plugin\+::send\+Goal (\begin{DoxyParamCaption}\item[{send\+Goal\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{send\+Goal\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00435\ \ \ \ \ \{}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionClientProxy}{ActionClientProxy}}\ *actionClientProxy\ =\ actionClientHandles.get(in-\/>actionClientHandle);}
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ sim::moveStackItemToTop(in-\/>\_.stackID,\ 0);}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00441\ \textcolor{preprocessor}{\#include\ <actcli\_sendGoal.cpp>}}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionClientProxy-\/>actionType);}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00446\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a33b70020b73310ef4360851f0c84ed1b}\label{classPlugin_a33b70020b73310ef4360851f0c84ed1b} 
+\index{Plugin@{Plugin}!sendTransform@{sendTransform}}
+\index{sendTransform@{sendTransform}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{sendTransform()}{sendTransform()}}
+{\footnotesize\ttfamily void Plugin\+::send\+Transform (\begin{DoxyParamCaption}\item[{send\+Transform\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{send\+Transform\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00638\ \ \ \ \ \{}
+\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ geometry\_msgs::msg::TransformStamped\ t;}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ read\_\_geometry\_msgs\_\_msg\_\_TransformStamped(in-\/>\_.stackID,\ \&t);}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ tfbr-\/>sendTransform(t);}
+\DoxyCodeLine{00642\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a22bc8733228ffc635d5b06ba46070c0a}\label{classPlugin_a22bc8733228ffc635d5b06ba46070c0a} 
+\index{Plugin@{Plugin}!sendTransforms@{sendTransforms}}
+\index{sendTransforms@{sendTransforms}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{sendTransforms()}{sendTransforms()}}
+{\footnotesize\ttfamily void Plugin\+::send\+Transforms (\begin{DoxyParamCaption}\item[{send\+Transforms\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{send\+Transforms\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00645\ \ \ \ \ \{}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ std::vector<geometry\_msgs::msg::TransformStamped>\ v;}
+\DoxyCodeLine{00647\ }
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ sim::moveStackItemToTop(in-\/>\_.stackID,\ 0);}
+\DoxyCodeLine{00649\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ sim::getStackTableInfo(in-\/>\_.stackID,\ 0);}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ <\ 0)}
+\DoxyCodeLine{00651\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ sim::exception(\textcolor{stringliteral}{"{}error\ reading\ input\ argument\ 1\ (origin):\ expected\ array"{}});}
+\DoxyCodeLine{00652\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ oldsz\ =\ sim::getStackSize(in-\/>\_.stackID);}
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ sim::unfoldStackTable(in-\/>\_.stackID);}
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ sz\ =\ (sim::getStackSize(in-\/>\_.stackID)\ -\/\ oldsz\ +\ 1)\ /\ 2;}
+\DoxyCodeLine{00655\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ sz;\ i++)}
+\DoxyCodeLine{00656\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00657\ \ \ \ \ \ \ \ \ \ \ \ \ sim::moveStackItemToTop(in-\/>\_.stackID,\ oldsz\ -\/\ 1);}
+\DoxyCodeLine{00658\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ j;}
+\DoxyCodeLine{00659\ \ \ \ \ \ \ \ \ \ \ \ \ read\_\_int32(in-\/>\_.stackID,\ \&j);}
+\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ \ \ \ \ sim::moveStackItemToTop(in-\/>\_.stackID,\ oldsz\ -\/\ 1);}
+\DoxyCodeLine{00661\ \ \ \ \ \ \ \ \ \ \ \ \ geometry\_msgs::msg::TransformStamped\ t;}
+\DoxyCodeLine{00662\ \ \ \ \ \ \ \ \ \ \ \ \ read\_\_geometry\_msgs\_\_msg\_\_TransformStamped(in-\/>\_.stackID,\ \&t);}
+\DoxyCodeLine{00663\ \ \ \ \ \ \ \ \ \ \ \ \ v.push\_back(t);}
+\DoxyCodeLine{00664\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00665\ }
+\DoxyCodeLine{00666\ \ \ \ \ \ \ \ \ tfbr-\/>sendTransform(v);}
+\DoxyCodeLine{00667\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a7036a09fb627d0e07aef7dfdbadae88a}\label{classPlugin_a7036a09fb627d0e07aef7dfdbadae88a} 
+\index{Plugin@{Plugin}!serviceTreatUInt8ArrayAsString@{serviceTreatUInt8ArrayAsString}}
+\index{serviceTreatUInt8ArrayAsString@{serviceTreatUInt8ArrayAsString}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{serviceTreatUInt8ArrayAsString()}{serviceTreatUInt8ArrayAsString()}}
+{\footnotesize\ttfamily void Plugin\+::service\+Treat\+UInt8\+Array\+As\+String (\begin{DoxyParamCaption}\item[{service\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{service\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00385\ \ \ \ \ \{}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structServiceProxy}{ServiceProxy}}\ *serviceProxy\ =\ serviceHandles.get(in-\/>serviceHandle);}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ serviceProxy-\/>rd\_opt.uint8array\_as\_string\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ serviceProxy-\/>wr\_opt.uint8array\_as\_string\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00389\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a39c2e509b572d470bbea4a52d45d5c3e}\label{classPlugin_a39c2e509b572d470bbea4a52d45d5c3e} 
+\index{Plugin@{Plugin}!setParamBool@{setParamBool}}
+\index{setParamBool@{setParamBool}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{setParamBool()}{setParamBool()}}
+{\footnotesize\ttfamily void Plugin\+::set\+Param\+Bool (\begin{DoxyParamCaption}\item[{set\+Param\+Bool\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{set\+Param\+Bool\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00838\ \ \ \ \ \{}
+\DoxyCodeLine{00839\ \ \ \ \ \ \ \ \ params\_client-\/>set\_parameters(\{rclcpp::Parameter(in-\/>name,\ in-\/>value)\});}
+\DoxyCodeLine{00840\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_af46f9f5b50f4950f13cb042e1c6f3ede}\label{classPlugin_af46f9f5b50f4950f13cb042e1c6f3ede} 
+\index{Plugin@{Plugin}!setParamDouble@{setParamDouble}}
+\index{setParamDouble@{setParamDouble}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{setParamDouble()}{setParamDouble()}}
+{\footnotesize\ttfamily void Plugin\+::set\+Param\+Double (\begin{DoxyParamCaption}\item[{set\+Param\+Double\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{set\+Param\+Double\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00833\ \ \ \ \ \{}
+\DoxyCodeLine{00834\ \ \ \ \ \ \ \ \ params\_client-\/>set\_parameters(\{rclcpp::Parameter(in-\/>name,\ in-\/>value)\});}
+\DoxyCodeLine{00835\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_aec57e6e193ea0d147d2ec2cc6544a424}\label{classPlugin_aec57e6e193ea0d147d2ec2cc6544a424} 
+\index{Plugin@{Plugin}!setParamInt@{setParamInt}}
+\index{setParamInt@{setParamInt}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{setParamInt()}{setParamInt()}}
+{\footnotesize\ttfamily void Plugin\+::set\+Param\+Int (\begin{DoxyParamCaption}\item[{set\+Param\+Int\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{set\+Param\+Int\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00828\ \ \ \ \ \{}
+\DoxyCodeLine{00829\ \ \ \ \ \ \ \ \ params\_client-\/>set\_parameters(\{rclcpp::Parameter(in-\/>name,\ in-\/>value)\});}
+\DoxyCodeLine{00830\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a30b09b2356d87958d8688184e16bd292}\label{classPlugin_a30b09b2356d87958d8688184e16bd292} 
+\index{Plugin@{Plugin}!setParamString@{setParamString}}
+\index{setParamString@{setParamString}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{setParamString()}{setParamString()}}
+{\footnotesize\ttfamily void Plugin\+::set\+Param\+String (\begin{DoxyParamCaption}\item[{set\+Param\+String\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{set\+Param\+String\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00823\ \ \ \ \ \{}
+\DoxyCodeLine{00824\ \ \ \ \ \ \ \ \ params\_client-\/>set\_parameters(\{rclcpp::Parameter(in-\/>name,\ in-\/>value)\});}
+\DoxyCodeLine{00825\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a8549edf55df1981758dc7b87e72f3f5d}\label{classPlugin_a8549edf55df1981758dc7b87e72f3f5d} 
+\index{Plugin@{Plugin}!shouldProxyBeDestroyedAfterSimulationStop@{shouldProxyBeDestroyedAfterSimulationStop}}
+\index{shouldProxyBeDestroyedAfterSimulationStop@{shouldProxyBeDestroyedAfterSimulationStop}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{shouldProxyBeDestroyedAfterSimulationStop()}{shouldProxyBeDestroyedAfterSimulationStop()}}
+{\footnotesize\ttfamily bool Plugin\+::should\+Proxy\+Be\+Destroyed\+After\+Simulation\+Stop (\begin{DoxyParamCaption}\item[{int}]{script\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151\ \ \ \ \ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(sim::getSimulationState()\ ==\ sim\_simulation\_stopped)}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keyword}{property}\ =\ sim::getScriptInt32Param(scriptID,\ sim\_scriptintparam\_type);}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#if\ SIM\_PROGRAM\_FULL\_VERSION\_NB\ <=\ 4010003}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(property\ \&\ sim\_scripttype\_threaded)}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{property}\ -\/=\ sim\_scripttype\_threaded;}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(property\ \&\ sim\_scripttype\_threaded\_old)}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{property}\ -\/=\ sim\_scripttype\_threaded\_old;}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(property\ ==\ sim\_scripttype\_addonscript\ ||\ property\ ==\ sim\_scripttype\_addonfunction\ ||\ property\ ==\ sim\_scripttype\_customizationscript)}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00165\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_acd4622ea27d5c7a36350329cdf821c41}\label{classPlugin_acd4622ea27d5c7a36350329cdf821c41} 
+\index{Plugin@{Plugin}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily void Plugin\+::shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00906\ \ \ \ \ \{}
+\DoxyCodeLine{00907\ \ \ \ \ \ \ \ \ rclcpp::shutdown();}
+\DoxyCodeLine{00908\ \ \ \ \ \ \ \ \ params\_client\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00909\ \ \ \ \ \ \ \ \ node\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00910\ }
+\DoxyCodeLine{00911\ \textcolor{preprocessor}{\#if\ image\_transport\_FOUND}}
+\DoxyCodeLine{00912\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ imtr;}
+\DoxyCodeLine{00913\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00914\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ tfbr;}
+\DoxyCodeLine{00915\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a206e3aad68c694085dc3783c13de7c2e}\label{classPlugin_a206e3aad68c694085dc3783c13de7c2e} 
+\index{Plugin@{Plugin}!shutdownActionClient@{shutdownActionClient}}
+\index{shutdownActionClient@{shutdownActionClient}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{shutdownActionClient()}{shutdownActionClient()}}
+{\footnotesize\ttfamily void Plugin\+::shutdown\+Action\+Client (\begin{DoxyParamCaption}\item[{shutdown\+Action\+Client\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{shutdown\+Action\+Client\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00414\ \ \ \ \ \{}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionClientProxy}{ActionClientProxy}}\ *actionClientProxy\ =\ actionClientHandles.get(in-\/>actionClientHandle);}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00418\ \textcolor{preprocessor}{\#include\ <actcli\_del.cpp>}}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionClientProxy-\/>actionType);}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ actionClientHandles.remove(actionClientProxy);}
+\DoxyCodeLine{00425\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a3fee26e5d0e1ec76884a3c84226ac32c}\label{classPlugin_a3fee26e5d0e1ec76884a3c84226ac32c} 
+\index{Plugin@{Plugin}!shutdownActionServer@{shutdownActionServer}}
+\index{shutdownActionServer@{shutdownActionServer}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{shutdownActionServer()}{shutdownActionServer()}}
+{\footnotesize\ttfamily void Plugin\+::shutdown\+Action\+Server (\begin{DoxyParamCaption}\item[{shutdown\+Action\+Server\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{shutdown\+Action\+Server\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00483\ \ \ \ \ \{}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structActionServerProxy}{ActionServerProxy}}\ *actionServerProxy\ =\ actionServerHandles.get(in-\/>actionServerHandle);}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00487\ \textcolor{preprocessor}{\#include\ <actsrv\_del.cpp>}}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}action"{}},\ actionServerProxy-\/>actionType);}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ actionServerHandles.remove(actionServerProxy);}
+\DoxyCodeLine{00494\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_acbb65ade4d118aca769cdf70aeb336e9}\label{classPlugin_acbb65ade4d118aca769cdf70aeb336e9} 
+\index{Plugin@{Plugin}!shutdownClient@{shutdownClient}}
+\index{shutdownClient@{shutdownClient}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{shutdownClient()}{shutdownClient()}}
+{\footnotesize\ttfamily void Plugin\+::shutdown\+Client (\begin{DoxyParamCaption}\item[{shutdown\+Client\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{shutdown\+Client\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00306\ \ \ \ \ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structClientProxy}{ClientProxy}}\ *clientProxy\ =\ clientHandles.get(in-\/>clientHandle);}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00310\ \textcolor{preprocessor}{\#include\ <cli\_del.cpp>}}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}service"{}},\ clientProxy-\/>serviceType);}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ clientHandles.remove(clientProxy);}
+\DoxyCodeLine{00317\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a6d7d14b05f58a6a349a991e3703a4d3e}\label{classPlugin_a6d7d14b05f58a6a349a991e3703a4d3e} 
+\index{Plugin@{Plugin}!shutdownPublisher@{shutdownPublisher}}
+\index{shutdownPublisher@{shutdownPublisher}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{shutdownPublisher()}{shutdownPublisher()}}
+{\footnotesize\ttfamily void Plugin\+::shutdown\+Publisher (\begin{DoxyParamCaption}\item[{shutdown\+Publisher\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{shutdown\+Publisher\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00256\ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPublisherProxy}{PublisherProxy}}\ *publisherProxy\ =\ publisherHandles.get(in-\/>publisherHandle);}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#include\ <pub\_del.cpp>}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}message"{}},\ publisherProxy-\/>topicType);}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ publisherHandles.remove(publisherProxy);}
+\DoxyCodeLine{00267\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_ad187541f2b611f5acef7d534bc64794b}\label{classPlugin_ad187541f2b611f5acef7d534bc64794b} 
+\index{Plugin@{Plugin}!shutdownService@{shutdownService}}
+\index{shutdownService@{shutdownService}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{shutdownService()}{shutdownService()}}
+{\footnotesize\ttfamily void Plugin\+::shutdown\+Service (\begin{DoxyParamCaption}\item[{shutdown\+Service\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{shutdown\+Service\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00371\ \ \ \ \ \{}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structServiceProxy}{ServiceProxy}}\ *serviceProxy\ =\ serviceHandles.get(in-\/>serviceHandle);}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\#include\ <srv\_del.cpp>}}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}service"{}},\ serviceProxy-\/>serviceType);}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ serviceHandles.remove(serviceProxy);}
+\DoxyCodeLine{00382\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a75cea79d76e61b70aa9fb89b096648a1}\label{classPlugin_a75cea79d76e61b70aa9fb89b096648a1} 
+\index{Plugin@{Plugin}!shutdownSubscription@{shutdownSubscription}}
+\index{shutdownSubscription@{shutdownSubscription}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{shutdownSubscription()}{shutdownSubscription()}}
+{\footnotesize\ttfamily void Plugin\+::shutdown\+Subscription (\begin{DoxyParamCaption}\item[{shutdown\+Subscription\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{shutdown\+Subscription\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00220\ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structSubscriptionProxy}{SubscriptionProxy}}\ *subscriptionProxy\ =\ subscriptionHandles.get(in-\/>subscriptionHandle);}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#include\ <sub\_del.cpp>}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}message"{}},\ subscriptionProxy-\/>topicType);}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ subscriptionHandles.remove(subscriptionProxy);}
+\DoxyCodeLine{00231\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_afe15d50f0fecad6c390118a4c30e64f5}\label{classPlugin_afe15d50f0fecad6c390118a4c30e64f5} 
+\index{Plugin@{Plugin}!subscriptionTreatUInt8ArrayAsString@{subscriptionTreatUInt8ArrayAsString}}
+\index{subscriptionTreatUInt8ArrayAsString@{subscriptionTreatUInt8ArrayAsString}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{subscriptionTreatUInt8ArrayAsString()}{subscriptionTreatUInt8ArrayAsString()}}
+{\footnotesize\ttfamily void Plugin\+::subscription\+Treat\+UInt8\+Array\+As\+String (\begin{DoxyParamCaption}\item[{subscription\+Treat\+UInt8\+Array\+As\+String\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{subscription\+Treat\+UInt8\+Array\+As\+String\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00234\ \ \ \ \ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structSubscriptionProxy}{SubscriptionProxy}}\ *subscriptionProxy\ =\ subscriptionHandles.get(in-\/>subscriptionHandle);}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ subscriptionProxy-\/>wr\_opt.uint8array\_as\_string\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00237\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_a19b5ab333d212979f3f803b3719b3d86}\label{classPlugin_a19b5ab333d212979f3f803b3719b3d86} 
+\index{Plugin@{Plugin}!supportedInterfaces@{supportedInterfaces}}
+\index{supportedInterfaces@{supportedInterfaces}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{supportedInterfaces()}{supportedInterfaces()}}
+{\footnotesize\ttfamily void Plugin\+::supported\+Interfaces (\begin{DoxyParamCaption}\item[{supported\+Interfaces\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{supported\+Interfaces\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00874\ \ \ \ \ \{}
+\DoxyCodeLine{00875\ \textcolor{preprocessor}{\#include\ <if\_list.cpp>}}
+\DoxyCodeLine{00876\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPlugin_ad214c5969603f11e585f46241dec2acc}\label{classPlugin_ad214c5969603f11e585f46241dec2acc} 
+\index{Plugin@{Plugin}!waitForService@{waitForService}}
+\index{waitForService@{waitForService}!Plugin@{Plugin}}
+\doxyparagraph{\texorpdfstring{waitForService()}{waitForService()}}
+{\footnotesize\ttfamily void Plugin\+::wait\+For\+Service (\begin{DoxyParamCaption}\item[{wait\+For\+Service\+\_\+in \texorpdfstring{$\ast$}{*}}]{in,  }\item[{wait\+For\+Service\+\_\+out \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00327\ \ \ \ \ \{}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structClientProxy}{ClientProxy}}\ *clientProxy\ =\ clientHandles.get(in-\/>clientHandle);}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(0)\ \{\}}
+\DoxyCodeLine{00331\ \textcolor{preprocessor}{\#include\ <cli\_wait.cpp>}}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{structunsupported__type}{unsupported\_type}}(\textcolor{stringliteral}{"{}service"{}},\ clientProxy-\/>serviceType);}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00336\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/amaury/2023-\/24-\/\+Final-\/\+Project-\/\+Group-\/2/src/ros2\+\_\+packages/sim\+\_\+ros2\+\_\+interface/src/sim\+\_\+ros2\+\_\+interface.\+cpp\end{DoxyCompactItemize}

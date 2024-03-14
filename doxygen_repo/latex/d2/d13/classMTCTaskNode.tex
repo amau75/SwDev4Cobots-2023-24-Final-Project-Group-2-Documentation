@@ -1,0 +1,153 @@
+\doxysubsection{MTCTask\+Node Class Reference}
+\hypertarget{classMTCTaskNode}{}\label{classMTCTaskNode}\index{MTCTaskNode@{MTCTaskNode}}
+\doxysubsubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMTCTaskNode_a7ff63f7afa72adf4d05fe4d8f56e12d1}{MTCTask\+Node}} (const rclcpp\+::\+Node\+Options \&options)
+\item 
+rclcpp\+::node\+\_\+interfaces\+::\+Node\+Base\+Interface\+::\+Shared\+Ptr \mbox{\hyperlink{classMTCTaskNode_a245059e4b07bc028eb82491e0a3cf982}{get\+Node\+Base\+Interface}} ()
+\item 
+void \mbox{\hyperlink{classMTCTaskNode_a2c995834a9c02dc871139204d36b211e}{do\+Task}} ()
+\item 
+void \mbox{\hyperlink{classMTCTaskNode_a0a6946ac33a9288b88f83d0f9b8571b8}{setup\+Planning\+Scene}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMTCTaskNode_a7ff63f7afa72adf4d05fe4d8f56e12d1}\label{classMTCTaskNode_a7ff63f7afa72adf4d05fe4d8f56e12d1} 
+\index{MTCTaskNode@{MTCTaskNode}!MTCTaskNode@{MTCTaskNode}}
+\index{MTCTaskNode@{MTCTaskNode}!MTCTaskNode@{MTCTaskNode}}
+\doxyparagraph{\texorpdfstring{MTCTaskNode()}{MTCTaskNode()}}
+{\footnotesize\ttfamily MTCTask\+Node\+::\+MTCTask\+Node (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Node\+Options \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ :\ node\_\{\ std::make\_shared<rclcpp::Node>(\textcolor{stringliteral}{"{}mtc\_node"{}},\ options)\ \}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Member Function Documentation}
+\Hypertarget{classMTCTaskNode_a2c995834a9c02dc871139204d36b211e}\label{classMTCTaskNode_a2c995834a9c02dc871139204d36b211e} 
+\index{MTCTaskNode@{MTCTaskNode}!doTask@{doTask}}
+\index{doTask@{doTask}!MTCTaskNode@{MTCTaskNode}}
+\doxyparagraph{\texorpdfstring{doTask()}{doTask()}}
+{\footnotesize\ttfamily void MTCTask\+Node\+::do\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \ \ task\_\ =\ createTask();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00110\ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ task\_.init();}
+\DoxyCodeLine{00112\ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordflow}{catch}\ (mtc::InitStageException\&\ e)}
+\DoxyCodeLine{00114\ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ RCLCPP\_ERROR\_STREAM(LOGGER,\ e);}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00117\ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \textcolor{keywordflow}{if}\ (!task\_.plan(5))}
+\DoxyCodeLine{00120\ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ RCLCPP\_ERROR\_STREAM(LOGGER,\ \textcolor{stringliteral}{"{}Task\ planning\ failed"{}});}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00123\ \ \ \}}
+\DoxyCodeLine{00124\ \ \ task\_.introspection().publishSolution(*task\_.solutions().front());}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \textcolor{keyword}{auto}\ result\ =\ task\_.execute(*task\_.solutions().front());}
+\DoxyCodeLine{00127\ \ \ \textcolor{keywordflow}{if}\ (result.val\ !=\ moveit\_msgs::msg::MoveItErrorCodes::SUCCESS)}
+\DoxyCodeLine{00128\ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ RCLCPP\_ERROR\_STREAM(LOGGER,\ \textcolor{stringliteral}{"{}Task\ execution\ failed"{}});}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00131\ \ \ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00134\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMTCTaskNode_a245059e4b07bc028eb82491e0a3cf982}\label{classMTCTaskNode_a245059e4b07bc028eb82491e0a3cf982} 
+\index{MTCTaskNode@{MTCTaskNode}!getNodeBaseInterface@{getNodeBaseInterface}}
+\index{getNodeBaseInterface@{getNodeBaseInterface}!MTCTaskNode@{MTCTaskNode}}
+\doxyparagraph{\texorpdfstring{getNodeBaseInterface()}{getNodeBaseInterface()}}
+{\footnotesize\ttfamily rclcpp\+::node\+\_\+interfaces\+::\+Node\+Base\+Interface\+::\+Shared\+Ptr MTCTask\+Node\+::get\+Node\+Base\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordflow}{return}\ node\_-\/>get\_node\_base\_interface();}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMTCTaskNode_a0a6946ac33a9288b88f83d0f9b8571b8}\label{classMTCTaskNode_a0a6946ac33a9288b88f83d0f9b8571b8} 
+\index{MTCTaskNode@{MTCTaskNode}!setupPlanningScene@{setupPlanningScene}}
+\index{setupPlanningScene@{setupPlanningScene}!MTCTaskNode@{MTCTaskNode}}
+\doxyparagraph{\texorpdfstring{setupPlanningScene()}{setupPlanningScene()}}
+{\footnotesize\ttfamily void MTCTask\+Node\+::setup\+Planning\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ moveit::planning\_interface::PlanningSceneInterface\ psi;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ moveit\_msgs::msg::CollisionObject\ object;}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{object}.id\ =\ \textcolor{stringliteral}{"{}object"{}};}
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{object}.header.frame\_id\ =\ \textcolor{stringliteral}{"{}world"{}};}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{object}.primitives.resize(1);}
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{object}.primitives[0].type\ =\ shape\_msgs::msg::SolidPrimitive::CYLINDER;}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{object}.primitives[0].dimensions\ =\ \{\ 0.1,\ 0.02\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ geometry\_msgs::msg::Pose\ pose;}
+\DoxyCodeLine{00061\ \ \ pose.position.x\ =\ .265;}
+\DoxyCodeLine{00062\ \ \ pose.position.y\ =\ .773;}
+\DoxyCodeLine{00063\ \ \ pose.position.z\ =\ 1.0;}
+\DoxyCodeLine{00064\ \ \ pose.orientation.w\ =\ 1.0;}
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{object}.pose\ =\ pose;}
+\DoxyCodeLine{00066\ \ \ psi.applyCollisionObject(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{object}.id\ =\ \textcolor{stringliteral}{"{}table"{}};\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{object}.header.frame\_id\ =\ \textcolor{stringliteral}{"{}world"{}};}
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordtype}{object}.primitives.resize(1);}
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{object}.primitives[0].type\ =\ shape\_msgs::msg::SolidPrimitive::BOX;}
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordtype}{object}.primitives[0].dimensions\ =\ \{\ 1,\ 1,\ 0.001\};}
+\DoxyCodeLine{00073\ \ \ pose.position.x\ =\ .51;}
+\DoxyCodeLine{00074\ \ \ pose.position.y\ =\ .3;}
+\DoxyCodeLine{00075\ \ \ pose.position.z\ =\ 0.87;}
+\DoxyCodeLine{00076\ \ \ pose.orientation.w\ =\ 1.0;}
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{object}.pose\ =\ pose;}
+\DoxyCodeLine{00078\ \ \ psi.applyCollisionObject(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{object}.id\ =\ \textcolor{stringliteral}{"{}roof"{}};\ }
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{object}.header.frame\_id\ =\ \textcolor{stringliteral}{"{}world"{}};}
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordtype}{object}.primitives.resize(1);}
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{object}.primitives[0].type\ =\ shape\_msgs::msg::SolidPrimitive::BOX;}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{object}.primitives[0].dimensions\ =\ \{\ 1,\ 1,\ 0.001\};}
+\DoxyCodeLine{00085\ \ \ pose.position.x\ =\ .51;}
+\DoxyCodeLine{00086\ \ \ pose.position.y\ =\ .3;}
+\DoxyCodeLine{00087\ \ \ pose.position.z\ =\ 1.82;}
+\DoxyCodeLine{00088\ \ \ pose.orientation.w\ =\ 1.0;}
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordtype}{object}.pose\ =\ pose;}
+\DoxyCodeLine{00090\ \ \ psi.applyCollisionObject(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \textcolor{keywordtype}{object}.id\ =\ \textcolor{stringliteral}{"{}rear\_panel"{}};\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{object}.header.frame\_id\ =\ \textcolor{stringliteral}{"{}world"{}};}
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{object}.primitives.resize(1);}
+\DoxyCodeLine{00095\ \ \ \textcolor{keywordtype}{object}.primitives[0].type\ =\ shape\_msgs::msg::SolidPrimitive::BOX;}
+\DoxyCodeLine{00096\ \ \ \textcolor{keywordtype}{object}.primitives[0].dimensions\ =\ \{\ 1,\ 0.001,\ 1\};}
+\DoxyCodeLine{00097\ \ \ pose.position.x\ =\ 0.5;}
+\DoxyCodeLine{00098\ \ \ pose.position.y\ =\ 0;}
+\DoxyCodeLine{00099\ \ \ pose.position.z\ =\ 1.4;}
+\DoxyCodeLine{00100\ \ \ pose.orientation.w\ =\ 1.0;}
+\DoxyCodeLine{00101\ \ \ \textcolor{keywordtype}{object}.pose\ =\ pose;}
+\DoxyCodeLine{00102\ \ \ psi.applyCollisionObject(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/amaury/2023-\/24-\/\+Final-\/\+Project-\/\+Group-\/2/src/mtc\+\_\+ur5e/src/mtc\+\_\+ur5e.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\doxysubsection{topic\+\_\+based\+\_\+system.\+hpp}
+\hypertarget{topic__based__system_8hpp_source}{}\label{topic__based__system_8hpp_source}\index{/home/amaury/2023-\/24-\/Final-\/Project-\/Group-\/2/src/topic\_based\_ros2\_control/include/topic\_based\_ros2\_control/topic\_based\_system.hpp@{/home/amaury/2023-\/24-\/Final-\/Project-\/Group-\/2/src/topic\_based\_ros2\_control/include/topic\_based\_ros2\_control/topic\_based\_system.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ 2022\ PickNik\ Inc.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ are\ met:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ \ \ *\ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ *\ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ distribution.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ \ *\ Neither\ the\ name\ of\ the\ PickNik\ Inc.\ nor\ the\ names\ of\ its}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ \ \ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived\ from}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ \ \ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ "{}AS\ IS"{}}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ THE}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ HOLDER\ OR\ CONTRIBUTORS\ BE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ SPECIAL,\ EXEMPLARY,\ OR}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ PROCUREMENT\ OF}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ Author:\ Jafar\ Abdi}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ Desc:\ ros2\_control\ system\ interface\ for\ topic\ based\ sim}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ C++}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{memory}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ ROS}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{hardware\_interface}\textcolor{preprocessor}{/}\textcolor{preprocessor}{handle}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{hardware\_interface}\textcolor{preprocessor}{/}\textcolor{preprocessor}{hardware\_info}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{hardware\_interface}\textcolor{preprocessor}{/}\textcolor{preprocessor}{system\_interface}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{hardware\_interface}\textcolor{preprocessor}{/}\textcolor{preprocessor}{types}\textcolor{preprocessor}{/}\textcolor{preprocessor}{hardware\_interface\_return\_values}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{hardware\_interface}\textcolor{preprocessor}{/}\textcolor{preprocessor}{types}\textcolor{preprocessor}{/}\textcolor{preprocessor}{hardware\_interface\_type\_values}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{rclcpp}\textcolor{preprocessor}{/}\textcolor{preprocessor}{node}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{rclcpp}\textcolor{preprocessor}{/}\textcolor{preprocessor}{publisher}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{rclcpp}\textcolor{preprocessor}{/}\textcolor{preprocessor}{subscription}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{sensor\_msgs}\textcolor{preprocessor}{/}\textcolor{preprocessor}{msg}\textcolor{preprocessor}{/}\textcolor{preprocessor}{joint\_state}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{namespace}\ topic\_based\_ros2\_control}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \textcolor{keyword}{using}\ CallbackReturn\ =\ rclcpp\_lifecycle::node\_interfaces::LifecycleNodeInterface::CallbackReturn;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{class}\ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{TopicBasedSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{hardware\_interface}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{SystemInterface}}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ CallbackReturn\ on\_init(\textcolor{keyword}{const}\ hardware\_interface::HardwareInfo\&\ info)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ std::vector<hardware\_interface::StateInterface>\ export\_state\_interfaces()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ std::vector<hardware\_interface::CommandInterface>\ export\_command\_interfaces()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ hardware\_interface::return\_type\ read(\textcolor{keyword}{const}\ rclcpp::Time\&\ time,\ \textcolor{keyword}{const}\ rclcpp::Duration\&\ period)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ hardware\_interface::return\_type\ write(\textcolor{keyword}{const}\ rclcpp::Time\&\ \textcolor{comment}{/*time*/},\ \textcolor{keyword}{const}\ rclcpp::Duration\&\ \textcolor{comment}{/*period*/})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00069\ \ \ rclcpp::Subscription<sensor\_msgs::msg::JointState>::SharedPtr\ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{topic\_based\_joint\_states\_subscriber\_}};}
+\DoxyCodeLine{00070\ \ \ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{rclcpp}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{Publisher}}<\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{sensor\_msgs}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{msg}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{JointState}}>::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{SharedPtr}}\ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{topic\_based\_joint\_commands\_publisher\_}};}
+\DoxyCodeLine{00071\ \ \ rclcpp::Node::SharedPtr\ node\_;}
+\DoxyCodeLine{00072\ \ \ sensor\_msgs::msg::JointState\ latest\_joint\_state\_;}
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{bool}\ sum\_wrapped\_joint\_states\_\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \textcolor{comment}{///\ Use\ standard\ interfaces\ for\ joints\ because\ they\ are\ relevant\ for\ dynamic\ behavior}}
+\DoxyCodeLine{00076\ \ \ std::array<std::string,\ 4>\ standard\_interfaces\_\ =\ \{\ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{hardware\_interface}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{HW\_IF\_POSITION}},}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{hardware\_interface}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{HW\_IF\_VELOCITY}},}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{hardware\_interface}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{HW\_IF\_ACCELERATION}},}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{hardware\_interface}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{HW\_IF\_EFFORT}}\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \textcolor{keyword}{struct}\ MimicJoint}
+\DoxyCodeLine{00082\ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ std::size\_t\ joint\_index;}
+\DoxyCodeLine{00084\ \ \ \ \ std::size\_t\ mimicked\_joint\_index;}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{double}\ multiplier\ =\ 1.0;}
+\DoxyCodeLine{00086\ \ \ \};}
+\DoxyCodeLine{00087\ \ \ std::vector<MimicJoint>\ mimic\_joints\_;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \textcolor{comment}{///\ The\ size\ of\ this\ vector\ is\ (standard\_interfaces\_.size()\ x\ nr\_joints)}}
+\DoxyCodeLine{00090\ \ \ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{std}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{vector}}<\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{std}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{vector}}<\textcolor{keywordtype}{double}>>\ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{joint\_commands\_}};}
+\DoxyCodeLine{00091\ \ \ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{std}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{vector}}<\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{std}}::\mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{vector}}<\textcolor{keywordtype}{double}>>\ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem}{joint\_states\_}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{comment}{//\ If\ the\ difference\ between\ the\ current\ joint\ state\ and\ joint\ command\ is\ less\ than\ this\ value,}}
+\DoxyCodeLine{00094\ \ \ \textcolor{comment}{//\ the\ joint\ command\ will\ not\ be\ published.}}
+\DoxyCodeLine{00095\ \ \ \textcolor{keywordtype}{double}\ trigger\_joint\_command\_threshold\_\ =\ 1e-\/5;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ HandleType>}
+\DoxyCodeLine{00098\ \ \ \textcolor{keywordtype}{bool}\ getInterface(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ interface\_name,\ \textcolor{keyword}{const}\ size\_t\ vector\_index,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::vector<\textcolor{keywordtype}{double}>>\&\ values,\ std::vector<HandleType>\&\ interfaces);}
+\DoxyCodeLine{00100\ \};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \}\ \ \textcolor{comment}{//\ namespace\ topic\_based\_ros2\_control}}
+
+\end{DoxyCode}

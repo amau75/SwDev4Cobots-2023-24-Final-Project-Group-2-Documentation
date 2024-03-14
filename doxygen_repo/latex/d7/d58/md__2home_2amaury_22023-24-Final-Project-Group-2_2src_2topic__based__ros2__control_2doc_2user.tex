@@ -1,0 +1,70 @@
+\doxysection{User Guide}
+\hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user}{}\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user}\index{User Guide@{User Guide}}
+\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md9}%
+\Hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md9}%
+ \hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md10}{}\doxysubsection{\texorpdfstring{Topic Based System}{Topic Based System}}\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md10}
+The topic\+\_\+based system implements {\ttfamily hardware\+\_\+interface\+::\+System\+Interface} supporting command and state interfaces through ROS topic communication layer.\hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Move\+It and Isaac sim integration}{Move\+It and Isaac sim integration}}\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md11}
+Follow the instructions in the \href{https://moveit.picknik.ai/humble/doc/how_to_guides/how_to_guides.html}{\texttt{ Move\+It and Isaac sim integration}} guide to setup your robot for Move\+It and Isaac sim integration.\hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{ros2\+\_\+control urdf tag}{ros2\+\_\+control urdf tag}}\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md12}
+The topic\+\_\+based system interface has a few {\ttfamily ros2\+\_\+control} urdf tags to customize its behavior.\hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md13}{}\doxyparagraph{\texorpdfstring{Parameters}{Parameters}}\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md13}
+
+\begin{DoxyItemize}
+\item joint\+\_\+commands\+\_\+topic\+: (default\+: "{}/robot\+\_\+joint\+\_\+command"{}). Example\+: {\ttfamily \texorpdfstring{$<$}{<}param name="{}joint\+\_\+commands\+\_\+topic"{}\texorpdfstring{$>$}{>}/my\+\_\+topic\+\_\+joint\+\_\+commands\texorpdfstring{$<$}{<}/param\texorpdfstring{$>$}{>}}.
+\item joint\+\_\+states\+\_\+topic\+: (default\+: "{}/robot\+\_\+joint\+\_\+states"{}). Example\+: {\ttfamily \texorpdfstring{$<$}{<}param name="{}joint\+\_\+states\+\_\+topic"{}\texorpdfstring{$>$}{>}/my\+\_\+topic\+\_\+joint\+\_\+states\texorpdfstring{$<$}{<}/param\texorpdfstring{$>$}{>}}.
+\item trigger\+\_\+joint\+\_\+command\+\_\+threshold\+: (default\+: 1e-\/5). Used to avoid spamming the joint command topic when the difference between the current joint state and the joint command is smaller than this value, set to zero to always send the joint command. Example\+: {\ttfamily \texorpdfstring{$<$}{<}param name="{}trigger\+\_\+joint\+\_\+command\+\_\+threshold"{}\texorpdfstring{$>$}{>}0.\+001\texorpdfstring{$<$}{<}/param\texorpdfstring{$>$}{>}}.
+\item sum\+\_\+wrapped\+\_\+joint\+\_\+states\+: (default\+: "{}false"{}). Used to track the total rotation for joint states the values reported on the {\ttfamily joint\+\_\+commands\+\_\+topic} wrap from 2\texorpdfstring{$\ast$}{*}pi to -\/2\texorpdfstring{$\ast$}{*}pi when rotating in the positive direction. (Isaac Sim only reports joint states from 2\texorpdfstring{$\ast$}{*}pi to -\/2\texorpdfstring{$\ast$}{*}pi) Example\+: {\ttfamily \texorpdfstring{$<$}{<}param name="{}sum\+\_\+wrapped\+\_\+joint\+\_\+states"{}\texorpdfstring{$>$}{>}true\texorpdfstring{$<$}{<}/param\texorpdfstring{$>$}{>}}.
+\end{DoxyItemize}\hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md14}{}\doxyparagraph{\texorpdfstring{Per-\/joint Parameters}{Per-\/joint Parameters}}\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md14}
+
+\begin{DoxyItemize}
+\item mimic\+: Defined name of the joint to mimic. This is often used concept with parallel grippers. Example\+: {\ttfamily \texorpdfstring{$<$}{<}param name="{}mimic"{}\texorpdfstring{$>$}{>}joint1\texorpdfstring{$<$}{<}/param\texorpdfstring{$>$}{>}}.
+\item multiplier\+: Multiplier of values for mimicking joint defined in mimic parameter. Example\+: {\ttfamily \texorpdfstring{$<$}{<}param name="{}multiplier"{}\texorpdfstring{$>$}{>}-\/2\texorpdfstring{$<$}{<}/param\texorpdfstring{$>$}{>}}.
+\end{DoxyItemize}\hypertarget{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{Modifying the urdf {\ttfamily ros2\+\_\+control} tag for new robots}{Modifying the urdf {\ttfamily ros2\+\_\+control} tag for new robots}}\label{md__2home_2amaury_22023-24-Final-Project-Group-2_2src_2topic__based__ros2__control_2doc_2user_autotoc_md15}
+If your robot description support mock\+\_\+components you only need to change {\ttfamily \texorpdfstring{$<$}{<}plugin\texorpdfstring{$>$}{>}mock\+\_\+components/\+Generic\+System\texorpdfstring{$<$}{<}/plugin\texorpdfstring{$>$}{>}} to {\ttfamily \texorpdfstring{$<$}{<}plugin\texorpdfstring{$>$}{>}topic\+\_\+based\+\_\+ros2\+\_\+control/\+Topic\+Based\+System\texorpdfstring{$<$}{<}/plugin\texorpdfstring{$>$}{>}}, make sure to add the {\ttfamily joint\+\_\+commands\+\_\+topic} and {\ttfamily joint\+\_\+states\+\_\+topic} to point to the correct topics.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<\textcolor{keywordtype}{ros2\_control}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}name"{}}\ \textcolor{keyword}{type}=\textcolor{stringliteral}{"{}system"{}}>}
+\DoxyCodeLine{\ \ \ \ <\textcolor{keywordtype}{hardware}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{plugin}>\textcolor{keyword}{topic\_based\_ros2\_control}/\textcolor{keyword}{TopicBasedSystem}</\textcolor{keywordtype}{plugin}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}joint\_commands\_topic"{}}>/\textcolor{keyword}{topic\_based\_joint\_commands}</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}joint\_states\_topic"{}}>/\textcolor{keyword}{topic\_based\_joint\_states}</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}sum\_wrapped\_joint\_states"{}}>\textcolor{keyword}{true}</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ </\textcolor{keywordtype}{hardware}>}
+\DoxyCodeLine{\ \ \ \ <\textcolor{keywordtype}{joint}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}joint\_1"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{command\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}position"{}}/>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{state\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}position"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}initial\_value"{}}>0.0</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ </\textcolor{keywordtype}{state\_interface}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{state\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}velocity"{}}/>}
+\DoxyCodeLine{\ \ \ \ </\textcolor{keywordtype}{joint}>}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ <\textcolor{keywordtype}{joint}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}joint\_n"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{command\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}position"{}}/>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{state\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}position"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}initial\_value"{}}>0.0</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ </\textcolor{keywordtype}{state\_interface}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{state\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}velocity"{}}/>}
+\DoxyCodeLine{\ \ \ \ </\textcolor{keywordtype}{joint}>}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ <\textcolor{keywordtype}{joint}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}mimic\_joint\_1"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}mimic"{}}>\textcolor{keyword}{joint\_k}</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}multiplier"{}}>1</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{command\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}position"{}}\ />}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{state\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}position"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}initial\_value"{}}>0.0</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ </\textcolor{keywordtype}{state\_interface}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{state\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}velocity"{}}/>}
+\DoxyCodeLine{\ \ \ \ </\textcolor{keywordtype}{joint}>}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ <\textcolor{keywordtype}{joint}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}mimic\_joint\_n"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}mimic"{}}>\textcolor{keyword}{joint\_kn}</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}multiplier"{}}>1</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{command\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}position"{}}\ />}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{state\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}position"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <\textcolor{keywordtype}{param}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}initial\_value"{}}>0.0</\textcolor{keywordtype}{param}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ </\textcolor{keywordtype}{state\_interface}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <\textcolor{keywordtype}{state\_interface}\ \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}velocity"{}}/>}
+\DoxyCodeLine{\ \ \ \ </\textcolor{keywordtype}{joint}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{ros2\_control}>}
+
+\end{DoxyCode}
+ 

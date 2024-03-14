@@ -1,0 +1,327 @@
+\doxysubsection{topic\+\_\+based\+\_\+ros2\+\_\+control\+::Topic\+Based\+System Class Reference}
+\hypertarget{classtopic__based__ros2__control_1_1TopicBasedSystem}{}\label{classtopic__based__ros2__control_1_1TopicBasedSystem}\index{topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}}
+Inheritance diagram for topic\+\_\+based\+\_\+ros2\+\_\+control\+::Topic\+Based\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d3/d45/classtopic__based__ros2__control_1_1TopicBasedSystem}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Callback\+Return \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem_ad73994434d98675676338e39e598b020}{on\+\_\+init}} (const hardware\+\_\+interface\+::\+Hardware\+Info \&info) override
+\item 
+std\+::vector$<$ hardware\+\_\+interface\+::\+State\+Interface $>$ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem_a87e87572b4dca72937cf977dde4cfcd1}{export\+\_\+state\+\_\+interfaces}} () override
+\item 
+std\+::vector$<$ hardware\+\_\+interface\+::\+Command\+Interface $>$ \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem_aed7fb118f260b3238d69ffa2f63bab69}{export\+\_\+command\+\_\+interfaces}} () override
+\item 
+hardware\+\_\+interface\+::return\+\_\+type \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem_a9143dc36bf030efb525f570fef77104f}{read}} (const rclcpp\+::\+Time \&time, const rclcpp\+::\+Duration \&period) override
+\item 
+hardware\+\_\+interface\+::return\+\_\+type \mbox{\hyperlink{classtopic__based__ros2__control_1_1TopicBasedSystem_a3ee0e649c034b4812de3f19b9f7527cf}{write}} (const rclcpp\+::\+Time \&, const rclcpp\+::\+Duration \&) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Member Function Documentation}
+\Hypertarget{classtopic__based__ros2__control_1_1TopicBasedSystem_aed7fb118f260b3238d69ffa2f63bab69}\label{classtopic__based__ros2__control_1_1TopicBasedSystem_aed7fb118f260b3238d69ffa2f63bab69} 
+\index{topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}!export\_command\_interfaces@{export\_command\_interfaces}}
+\index{export\_command\_interfaces@{export\_command\_interfaces}!topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}}
+\doxyparagraph{\texorpdfstring{export\_command\_interfaces()}{export\_command\_interfaces()}}
+{\footnotesize\ttfamily std\+::vector$<$ hardware\+\_\+interface\+::\+Command\+Interface $>$ topic\+\_\+based\+\_\+ros2\+\_\+control\+::\+Topic\+Based\+System\+::export\+\_\+command\+\_\+interfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \{}
+\DoxyCodeLine{00186\ \ \ std::vector<hardware\_interface::CommandInterface>\ command\_interfaces;}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \textcolor{comment}{//\ Joints'\ state\ interfaces}}
+\DoxyCodeLine{00189\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ =\ 0u;\ i\ <\ info\_.joints.size();\ i++)}
+\DoxyCodeLine{00190\ \ \ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ joint\ =\ info\_.joints[i];}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ interface\ :\ joint.command\_interfaces)}
+\DoxyCodeLine{00193\ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!getInterface(joint.name,\ interface.name,\ i,\ joint\_commands\_,\ command\_interfaces))}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Interface\ is\ not\ found\ in\ the\ standard\ list."{}});}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \textcolor{keywordflow}{return}\ command\_interfaces;}
+\DoxyCodeLine{00202\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtopic__based__ros2__control_1_1TopicBasedSystem_a87e87572b4dca72937cf977dde4cfcd1}\label{classtopic__based__ros2__control_1_1TopicBasedSystem_a87e87572b4dca72937cf977dde4cfcd1} 
+\index{topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}!export\_state\_interfaces@{export\_state\_interfaces}}
+\index{export\_state\_interfaces@{export\_state\_interfaces}!topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}}
+\doxyparagraph{\texorpdfstring{export\_state\_interfaces()}{export\_state\_interfaces()}}
+{\footnotesize\ttfamily std\+::vector$<$ hardware\+\_\+interface\+::\+State\+Interface $>$ topic\+\_\+based\+\_\+ros2\+\_\+control\+::\+Topic\+Based\+System\+::export\+\_\+state\+\_\+interfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164\ \{}
+\DoxyCodeLine{00165\ \ \ std::vector<hardware\_interface::StateInterface>\ state\_interfaces;}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \textcolor{comment}{//\ Joints'\ state\ interfaces}}
+\DoxyCodeLine{00168\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ =\ 0u;\ i\ <\ info\_.joints.size();\ i++)}
+\DoxyCodeLine{00169\ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ joint\ =\ info\_.joints[i];}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ interface\ :\ joint.state\_interfaces)}
+\DoxyCodeLine{00172\ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ interface:\ if\ not\ in\ the\ standard\ list\ then\ use\ "{}other"{}\ interface\ list}}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!getInterface(joint.name,\ interface.name,\ i,\ joint\_states\_,\ state\_interfaces))}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Interface\ is\ not\ found\ in\ the\ standard\ list."{}});}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \textcolor{keywordflow}{return}\ state\_interfaces;}
+\DoxyCodeLine{00182\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtopic__based__ros2__control_1_1TopicBasedSystem_ad73994434d98675676338e39e598b020}\label{classtopic__based__ros2__control_1_1TopicBasedSystem_ad73994434d98675676338e39e598b020} 
+\index{topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}!on\_init@{on\_init}}
+\index{on\_init@{on\_init}!topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}}
+\doxyparagraph{\texorpdfstring{on\_init()}{on\_init()}}
+{\footnotesize\ttfamily Callback\+Return topic\+\_\+based\+\_\+ros2\+\_\+control\+::\+Topic\+Based\+System\+::on\+\_\+init (\begin{DoxyParamCaption}\item[{const hardware\+\_\+interface\+::\+Hardware\+Info \&}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \{}
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordflow}{if}\ (hardware\_interface::SystemInterface::on\_init(info)\ !=\ CallbackReturn::SUCCESS)}
+\DoxyCodeLine{00067\ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{return}\ CallbackReturn::ERROR;}
+\DoxyCodeLine{00069\ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{comment}{//\ Initialize\ storage\ for\ all\ joints'\ standard\ interfaces,\ regardless\ of\ their\ existence\ and\ set\ all\ values\ to\ nan}}
+\DoxyCodeLine{00072\ \ \ joint\_commands\_.resize(standard\_interfaces\_.size());}
+\DoxyCodeLine{00073\ \ \ joint\_states\_.resize(standard\_interfaces\_.size());}
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ =\ 0u;\ i\ <\ standard\_interfaces\_.size();\ i++)}
+\DoxyCodeLine{00075\ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ joint\_commands\_[i].resize(info\_.joints.size(),\ 0.0);}
+\DoxyCodeLine{00077\ \ \ \ \ joint\_states\_[i].resize(info\_.joints.size(),\ 0.0);}
+\DoxyCodeLine{00078\ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{comment}{//\ Initial\ command\ values}}
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ =\ 0u;\ i\ <\ info\_.joints.size();\ i++)}
+\DoxyCodeLine{00082\ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ component\ =\ info\_.joints[i];}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ interface\ :\ component.state\_interfaces)}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::find(standard\_interfaces\_.begin(),\ standard\_interfaces\_.end(),\ interface.name);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \textcolor{comment}{//\ If\ interface\ name\ is\ found\ in\ the\ interfaces\ list}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ standard\_interfaces\_.end())}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ index\ =\ \textcolor{keyword}{static\_cast<}std::size\_t\textcolor{keyword}{>}(std::distance(standard\_interfaces\_.begin(),\ it));}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ the\ initial\_value\ param\ is\ used}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!interface.initial\_value.empty())}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ joint\_commands\_[index][i]\ =\ std::stod(interface.initial\_value);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \textcolor{comment}{//\ Search\ for\ mimic\ joints}}
+\DoxyCodeLine{00101\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ =\ 0u;\ i\ <\ info\_.joints.size();\ ++i)}
+\DoxyCodeLine{00102\ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ joint\ =\ info\_.joints.at(i);}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{if}\ (joint.parameters.find(\textcolor{stringliteral}{"{}mimic"{}})\ !=\ joint.parameters.cend())}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ mimicked\_joint\_it\ =\ std::find\_if(}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ info\_.joints.begin(),\ info\_.joints.end(),}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ [\&mimicked\_joint\ =\ joint.parameters.at(\textcolor{stringliteral}{"{}mimic"{}})](\textcolor{keyword}{const}\ hardware\_interface::ComponentInfo\&\ joint\_info)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ return\ joint\_info.name\ ==\ mimicked\_joint;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mimicked\_joint\_it\ ==\ info\_.joints.cend())}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(std::string(\textcolor{stringliteral}{"{}Mimicked\ joint\ '"{}})\ +\ joint.parameters.at(\textcolor{stringliteral}{"{}mimic"{}})\ +\ \textcolor{stringliteral}{"{}'\ not\ found"{}});}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ MimicJoint\ mimic\_joint;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ mimic\_joint.joint\_index\ =\ i;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ mimic\_joint.mimicked\_joint\_index\ =}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}std::size\_t\textcolor{keyword}{>}(std::distance(info\_.joints.begin(),\ mimicked\_joint\_it));}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \textcolor{keyword}{auto}\ param\_it\ =\ joint.parameters.find(\textcolor{stringliteral}{"{}multiplier"{}});}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (param\_it\ !=\ joint.parameters.end())}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ mimic\_joint.multiplier\ =\ std::stod(joint.parameters.at(\textcolor{stringliteral}{"{}multiplier"{}}));}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ mimic\_joints\_.push\_back(mimic\_joint);}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ get\_hardware\_parameter\ =\ [\textcolor{keyword}{this}](\textcolor{keyword}{const}\ std::string\&\ parameter\_name,\ \textcolor{keyword}{const}\ std::string\&\ default\_value)\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ it\ =\ info\_.hardware\_parameters.find(parameter\_name);\ it\ !=\ info\_.hardware\_parameters.end())}
+\DoxyCodeLine{00130\ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ it-\/>second;}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{return}\ default\_value;}
+\DoxyCodeLine{00134\ \ \ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \textcolor{comment}{//\ Add\ random\ ID\ to\ prevent\ warnings\ about\ multiple\ publishers\ within\ the\ same\ node}}
+\DoxyCodeLine{00137\ \ \ rclcpp::NodeOptions\ options;}
+\DoxyCodeLine{00138\ \ \ options.arguments(\{\ \textcolor{stringliteral}{"{}-\/-\/ros-\/args"{}},\ \textcolor{stringliteral}{"{}-\/r"{}},\ \textcolor{stringliteral}{"{}\_\_node:=topic\_based\_ros2\_control\_"{}}\ +\ info\_.name\ \});}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ node\_\ =\ rclcpp::Node::make\_shared(\textcolor{stringliteral}{"{}\_"{}},\ options);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ it\ =\ info\_.hardware\_parameters.find(\textcolor{stringliteral}{"{}trigger\_joint\_command\_threshold"{}});\ it\ !=\ info\_.hardware\_parameters.end())}
+\DoxyCodeLine{00143\ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ trigger\_joint\_command\_threshold\_\ =\ std::stod(it-\/>second);}
+\DoxyCodeLine{00145\ \ \ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ topic\_based\_joint\_commands\_publisher\_\ =\ node\_-\/>create\_publisher<sensor\_msgs::msg::JointState>(}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ get\_hardware\_parameter(\textcolor{stringliteral}{"{}joint\_commands\_topic"{}},\ \textcolor{stringliteral}{"{}/robot\_joint\_commands"{}}),\ rclcpp::QoS(1));}
+\DoxyCodeLine{00149\ \ \ topic\_based\_joint\_states\_subscriber\_\ =\ node\_-\/>create\_subscription<sensor\_msgs::msg::JointState>(}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ get\_hardware\_parameter(\textcolor{stringliteral}{"{}joint\_states\_topic"{}},\ \textcolor{stringliteral}{"{}/robot\_joint\_states"{}}),\ rclcpp::SensorDataQoS(),}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ [\textcolor{keyword}{this}](\textcolor{keyword}{const}\ sensor\_msgs::msg::JointState::SharedPtr\ joint\_state)\ \{\ latest\_joint\_state\_\ =\ *joint\_state;\ \});}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \textcolor{comment}{//\ if\ the\ values\ on\ the\ \`{}joint\_states\_topic`\ are\ wrapped\ between\ -\/2*pi\ and\ 2*pi\ (like\ they\ are\ in\ Isaac\ Sim)}}
+\DoxyCodeLine{00154\ \ \ \textcolor{comment}{//\ sum\ the\ total\ joint\ rotation\ returned\ on\ the\ \`{}joint\_states\_`\ interface}}
+\DoxyCodeLine{00155\ \ \ \textcolor{keywordflow}{if}\ (get\_hardware\_parameter(\textcolor{stringliteral}{"{}sum\_wrapped\_joint\_states"{}},\ \textcolor{stringliteral}{"{}false"{}})\ ==\ \textcolor{stringliteral}{"{}true"{}})}
+\DoxyCodeLine{00156\ \ \ \{}
+\DoxyCodeLine{00157\ \ \ \ \ sum\_wrapped\_joint\_states\_\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00158\ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \textcolor{keywordflow}{return}\ CallbackReturn::SUCCESS;}
+\DoxyCodeLine{00161\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtopic__based__ros2__control_1_1TopicBasedSystem_a9143dc36bf030efb525f570fef77104f}\label{classtopic__based__ros2__control_1_1TopicBasedSystem_a9143dc36bf030efb525f570fef77104f} 
+\index{topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}!read@{read}}
+\index{read@{read}!topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}}
+\doxyparagraph{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::return\+\_\+type topic\+\_\+based\+\_\+ros2\+\_\+control\+::\+Topic\+Based\+System\+::read (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Time \&}]{time,  }\item[{const rclcpp\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00205\ \{}
+\DoxyCodeLine{00206\ \ \ \textcolor{keywordflow}{if}\ (rclcpp::ok())}
+\DoxyCodeLine{00207\ \ \ \{}
+\DoxyCodeLine{00208\ \ \ \ \ rclcpp::spin\_some(node\_);}
+\DoxyCodeLine{00209\ \ \ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ latest\_joint\_state\_.name.size();\ ++i)}
+\DoxyCodeLine{00212\ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ joints\ =\ info\_.joints;}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::find\_if(joints.begin(),\ joints.end(),}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\&joint\_name\ =\ std::as\_const(latest\_joint\_state\_.name[i])](}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ hardware\_interface::ComponentInfo\&\ info)\ \{\ return\ joint\_name\ ==\ info.name;\ \});}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ joints.end())}
+\DoxyCodeLine{00218\ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \textcolor{keyword}{auto}\ j\ =\ \textcolor{keyword}{static\_cast<}std::size\_t\textcolor{keyword}{>}(std::distance(joints.begin(),\ it));}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sum\_wrapped\_joint\_states\_)}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ sumRotationFromMinus2PiTo2Pi(latest\_joint\_state\_.position[i],\ joint\_states\_[POSITION\_INTERFACE\_INDEX][j]);}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ joint\_states\_[POSITION\_INTERFACE\_INDEX][j]\ =\ latest\_joint\_state\_.position[i];}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!latest\_joint\_state\_.velocity.empty())}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ joint\_states\_[VELOCITY\_INTERFACE\_INDEX][j]\ =\ latest\_joint\_state\_.velocity[i];}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!latest\_joint\_state\_.effort.empty())}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ joint\_states\_[EFFORT\_INTERFACE\_INDEX][j]\ =\ latest\_joint\_state\_.effort[i];}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00236\ \ \ \ \ \}}
+\DoxyCodeLine{00237\ \ \ \}}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ mimic\_joint\ :\ mimic\_joints\_)}
+\DoxyCodeLine{00240\ \ \ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ joint\_state\ :\ joint\_states\_)}
+\DoxyCodeLine{00242\ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ joint\_state[mimic\_joint.joint\_index]\ =\ mimic\_joint.multiplier\ *\ joint\_state[mimic\_joint.mimicked\_joint\_index];}
+\DoxyCodeLine{00244\ \ \ \ \ \}}
+\DoxyCodeLine{00245\ \ \ \}}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \textcolor{keywordflow}{return}\ hardware\_interface::return\_type::OK;}
+\DoxyCodeLine{00248\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtopic__based__ros2__control_1_1TopicBasedSystem_a3ee0e649c034b4812de3f19b9f7527cf}\label{classtopic__based__ros2__control_1_1TopicBasedSystem_a3ee0e649c034b4812de3f19b9f7527cf} 
+\index{topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}!write@{write}}
+\index{write@{write}!topic\_based\_ros2\_control::TopicBasedSystem@{topic\_based\_ros2\_control::TopicBasedSystem}}
+\doxyparagraph{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::return\+\_\+type topic\+\_\+based\+\_\+ros2\+\_\+control\+::\+Topic\+Based\+System\+::write (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Time \&}]{,  }\item[{const rclcpp\+::\+Duration \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00266\ \{}
+\DoxyCodeLine{00267\ \ \ \textcolor{comment}{//\ To\ avoid\ spamming\ TopicBased's\ joint\ command\ topic\ we\ check\ the\ difference\ between\ the\ joint\ states\ and}}
+\DoxyCodeLine{00268\ \ \ \textcolor{comment}{//\ the\ current\ joint\ commands,\ if\ it's\ smaller\ than\ a\ threshold\ we\ don't\ publish\ it.}}
+\DoxyCodeLine{00269\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ diff\ =\ std::transform\_reduce(}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ joint\_states\_[POSITION\_INTERFACE\_INDEX].cbegin(),\ joint\_states\_[POSITION\_INTERFACE\_INDEX].cend(),}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ joint\_commands\_[POSITION\_INTERFACE\_INDEX].cbegin(),\ 0.0,}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ [](\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ d1,\ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ d2)\ \{\ \textcolor{keywordflow}{return}\ std::abs(d1)\ +\ std::abs(d2);\ \},\ std::minus<double>\{\});}
+\DoxyCodeLine{00273\ \ \ \textcolor{keywordflow}{if}\ (diff\ <=\ trigger\_joint\_command\_threshold\_)}
+\DoxyCodeLine{00274\ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordflow}{return}\ hardware\_interface::return\_type::OK;}
+\DoxyCodeLine{00276\ \ \ \}}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \ \ sensor\_msgs::msg::JointState\ joint\_state;}
+\DoxyCodeLine{00279\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ info\_.joints.size();\ ++i)}
+\DoxyCodeLine{00280\ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ joint\_state.name.push\_back(info\_.joints[i].name);}
+\DoxyCodeLine{00282\ \ \ \ \ joint\_state.header.stamp\ =\ node\_-\/>now();}
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{comment}{//\ only\ send\ commands\ to\ the\ interfaces\ that\ are\ defined\ for\ this\ joint}}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ interface\ :\ info\_.joints[i].command\_interfaces)}
+\DoxyCodeLine{00285\ \ \ \ \ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (interface.name\ ==\ hardware\_interface::HW\_IF\_POSITION)}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ joint\_state.position.push\_back(joint\_commands\_[POSITION\_INTERFACE\_INDEX][i]);}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (interface.name\ ==\ hardware\_interface::HW\_IF\_VELOCITY)}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ joint\_state.velocity.push\_back(joint\_commands\_[VELOCITY\_INTERFACE\_INDEX][i]);}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (interface.name\ ==\ hardware\_interface::HW\_IF\_EFFORT)}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ joint\_state.effort.push\_back(joint\_commands\_[EFFORT\_INTERFACE\_INDEX][i]);}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ RCLCPP\_WARN\_ONCE(node\_-\/>get\_logger(),\ \textcolor{stringliteral}{"{}Joint\ '\%s'\ has\ unsupported\ command\ interfaces\ found:\ \%s."{}},}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ info\_.joints[i].name.c\_str(),\ interface.name.c\_str());}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00303\ \ \ \ \ \}}
+\DoxyCodeLine{00304\ \ \ \}}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ mimic\_joint\ :\ mimic\_joints\_)}
+\DoxyCodeLine{00307\ \ \ \{}
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ interface\ :\ info\_.joints[mimic\_joint.mimicked\_joint\_index].command\_interfaces)}
+\DoxyCodeLine{00309\ \ \ \ \ \{}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (interface.name\ ==\ hardware\_interface::HW\_IF\_POSITION)}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ joint\_state.position[mimic\_joint.joint\_index]\ =}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ mimic\_joint.multiplier\ *\ joint\_state.position[mimic\_joint.mimicked\_joint\_index];}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (interface.name\ ==\ hardware\_interface::HW\_IF\_VELOCITY)}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ joint\_state.velocity[mimic\_joint.joint\_index]\ =}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ mimic\_joint.multiplier\ *\ joint\_state.velocity[mimic\_joint.mimicked\_joint\_index];}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (interface.name\ ==\ hardware\_interface::HW\_IF\_EFFORT)}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ joint\_state.effort[mimic\_joint.joint\_index]\ =}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ mimic\_joint.multiplier\ *\ joint\_state.effort[mimic\_joint.mimicked\_joint\_index];}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ \}}
+\DoxyCodeLine{00326\ \ \ \}}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \ \ \textcolor{keywordflow}{if}\ (rclcpp::ok())}
+\DoxyCodeLine{00329\ \ \ \{}
+\DoxyCodeLine{00330\ \ \ \ \ topic\_based\_joint\_commands\_publisher\_-\/>publish(joint\_state);}
+\DoxyCodeLine{00331\ \ \ \}}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \ \ \textcolor{keywordflow}{return}\ hardware\_interface::return\_type::OK;}
+\DoxyCodeLine{00334\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/amaury/2023-\/24-\/\+Final-\/\+Project-\/\+Group-\/2/src/topic\+\_\+based\+\_\+ros2\+\_\+control/include/topic\+\_\+based\+\_\+ros2\+\_\+control/topic\+\_\+based\+\_\+system.\+hpp\item 
+/home/amaury/2023-\/24-\/\+Final-\/\+Project-\/\+Group-\/2/src/topic\+\_\+based\+\_\+ros2\+\_\+control/src/topic\+\_\+based\+\_\+system.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\doxysubsection{ros\+\_\+msg\+\_\+builtin\+\_\+io.\+h}
+\hypertarget{ros__msg__builtin__io_8h_source}{}\label{ros__msg__builtin__io_8h_source}\index{/home/amaury/2023-\/24-\/Final-\/Project-\/Group-\/2/src/ros2\_packages/sim\_ros2\_interface/include/sim\_ros2\_interface/ros\_msg\_builtin\_io.h@{/home/amaury/2023-\/24-\/Final-\/Project-\/Group-\/2/src/ros2\_packages/sim\_ros2\_interface/include/sim\_ros2\_interface/ros\_msg\_builtin\_io.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifndef}\ \textcolor{preprocessor}{SIM\_ROS2\_PLUGIN\_\_ROS\_MSG\_BUILTIN\_IO\_\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{SIM\_ROS2\_PLUGIN\_\_ROS\_MSG\_BUILTIN\_IO\_\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{rclcpp}\textcolor{preprocessor}{/}\textcolor{preprocessor}{rclcpp}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{rclcpp\_action}\textcolor{preprocessor}{/}\textcolor{preprocessor}{rclcpp\_action}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{bool}\ uint8array\_as\_string;}
+\DoxyCodeLine{00010\ \ \ \ \ ROS2ReadOptions();}
+\DoxyCodeLine{00011\ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ uint8array\_as\_string;}
+\DoxyCodeLine{00016\ \ \ \ \ ROS2WriteOptions();}
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ read\_\_bool(\textcolor{keywordtype}{int}\ stack,\ \textcolor{keywordtype}{bool}\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ read\_\_byte(\textcolor{keywordtype}{int}\ stack,\ uint8\_t\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ read\_\_char(\textcolor{keywordtype}{int}\ stack,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ read\_\_char(\textcolor{keywordtype}{int}\ stack,\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ read\_\_int8(\textcolor{keywordtype}{int}\ stack,\ int8\_t\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ read\_\_uint8(\textcolor{keywordtype}{int}\ stack,\ uint8\_t\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ read\_\_int16(\textcolor{keywordtype}{int}\ stack,\ int16\_t\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ read\_\_uint16(\textcolor{keywordtype}{int}\ stack,\ uint16\_t\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ read\_\_int32(\textcolor{keywordtype}{int}\ stack,\ int32\_t\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ read\_\_uint32(\textcolor{keywordtype}{int}\ stack,\ uint32\_t\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ read\_\_int64(\textcolor{keywordtype}{int}\ stack,\ int64\_t\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ read\_\_uint64(\textcolor{keywordtype}{int}\ stack,\ uint64\_t\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ read\_\_float32(\textcolor{keywordtype}{int}\ stack,\ \textcolor{keywordtype}{float}\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ read\_\_float64(\textcolor{keywordtype}{int}\ stack,\ \textcolor{keywordtype}{double}\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ read\_\_string(\textcolor{keywordtype}{int}\ stack,\ std::string\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ read\_\_time(\textcolor{keywordtype}{int}\ stack,\ rclcpp::Time\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ read\_\_duration(\textcolor{keywordtype}{int}\ stack,\ rclcpp::Duration\ *value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2ReadOptions}{ROS2ReadOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ write\_\_bool(\textcolor{keywordtype}{bool}\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ write\_\_byte(uint8\_t\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ write\_\_char(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ write\_\_char(\textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ write\_\_int8(int8\_t\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ write\_\_uint8(uint8\_t\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ write\_\_int16(int16\_t\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ write\_\_uint16(uint16\_t\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ write\_\_int32(int32\_t\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ write\_\_uint32(uint32\_t\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ write\_\_int64(int64\_t\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ write\_\_uint64(uint64\_t\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ write\_\_float32(\textcolor{keywordtype}{float}\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ write\_\_float64(\textcolor{keywordtype}{double}\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ write\_\_string(std::string\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ write\_\_time(rclcpp::Time\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ write\_\_duration(rclcpp::Duration\ value,\ \textcolor{keywordtype}{int}\ stack,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structROS2WriteOptions}{ROS2WriteOptions}}\ *opt\ =\ NULL);}
+\DoxyCodeLine{00053\ std::string\ goalUUIDtoString(\textcolor{keyword}{const}\ rclcpp\_action::GoalUUID\ \&uuid);}
+\DoxyCodeLine{00054\ rclcpp\_action::GoalUUID\ goalUUIDfromString(\textcolor{keyword}{const}\ std::string\ \&uuidStr);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}\ \textcolor{comment}{//\ SIM\_ROS2\_PLUGIN\_\_ROS\_MSG\_BUILTIN\_IO\_\_H}}
+
+\end{DoxyCode}
